@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import org.springframework.context.annotation.Profile;
-@Profile("!test")
+// @Profile("!test")
 @RestController
 @RequestMapping("/api")
 public class TestEndpointController {
