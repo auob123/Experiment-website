@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Custom log patterns -->
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) [%thread] %cyan(%logger{36}): %msg%n%rEx{short}"/>
+    <property name="ERROR_FILE_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %file: %msg%n%rEx{short}"/>
+
+    <!-- Console appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Error file appender -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>test-errors.log</file>
+        <encoder>
+            <pattern>${ERROR_FILE_PATTERN}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+
+    <!-- Root logger -->
+    <root level="ERROR">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ERROR_FILE"/>
+    </root>
+
+    <!-- Test-specific loggers -->
+    <logger name="com.labassistant.controller.ExperimentControllerTest" level="ERROR">
+        <appender-ref ref="ERROR_FILE"/>
+    </logger>
+    <logger name="com.labassistant.security.SecurityConfigTest" level="ERROR">
+        <appender-ref ref="ERROR_FILE"/>
+    </logger>
+    <logger name="com.labassistant.service.ExperimentServiceTest" level="ERROR">
+        <appender-ref ref="ERROR_FILE"/>
+    </logger>
+    <logger name="com.labassistant.service.UserDetailsServiceImplTest" level="ERROR">
+        <appender-ref ref="ERROR_FILE"/>
+    </logger>
+
+    <!-- Existing application logging configuration -->
+    <logger name="com.labassistant" level="DEBUG"/>
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.hibernate" level="ERROR"/>
+    <logger name="org.apache" level="WARN"/>
+    <logger name="tomcat" level="WARN"/>
+    <logger name="org.jboss.logging" level="OFF"/>
+    <logger name="com.zaxxer.hikari" level="WARN"/>
+    <logger name="org.springframework.test.context" level="WARN"/>
+    <logger name="org.springframework.boot.test" level="WARN"/>
+    <logger name="org.hibernate.SQL" level="WARN"/>
+    <logger name="org.hibernate.type.descriptor.sql" level="OFF"/>
+    <logger name="org.hibernate.jpa" level="OFF"/>
+</configuration>

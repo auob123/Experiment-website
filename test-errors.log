@@ -1,0 +1,14 @@
+2025-05-09 07:44:43 ERROR [main] LoggingFailureAnalysisReporter.java: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'commentRepository', defined in com.labassistant.repository.CommentRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication, could not be registered. A bean with that name has already been defined in com.labassistant.repository.CommentRepository defined in @EnableJpaRepositories declared on JpaConfig and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+

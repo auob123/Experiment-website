@@ -1,0 +1,17 @@
+com\labassistant\controller\SubmissionControllerTest.class
+com\labassistant\controller\CommentControllerTest.class
+com\labassistant\security\TestSecurityController.class
+com\labassistant\service\UserDetailsServiceImplTest.class
+com\labassistant\controller\AuthTestUtil.class
+com\labassistant\controller\ExperimentAITest.class
+com\labassistant\service\ExperimentServiceTest.class
+com\labassistant\controller\ExperimentAccessControllerTest.class
+com\labassistant\PhysicsLabAssistantApplicationTests.class
+com\labassistant\service\NotificationServiceTest.class
+com\labassistant\controller\AdminControllerTest.class
+com\labassistant\security\SecurityConfigTest.class
+com\labassistant\controller\ExperimentTest.class
+com\labassistant\controller\QnAControllerTest.class
+com\labassistant\controller\ExperimentControllerTest.class
+com\labassistant\AuthControllerIT.class
+com\labassistant\controller\UserControllerTest.class

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PhysicsLabAssistantApplication<physics-lab-assistant>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.labassistant.PhysicsLabAssistantApplication",
+            "projectName": "physics-lab-assistant",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
