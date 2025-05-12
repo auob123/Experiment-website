@@ -10,7 +10,7 @@ ENV MAVEN_CONFIG=/root/.m2
 RUN chmod +x ./mvnw
 
 # Build the application without running tests
-RUN ./mvnw clean package -DskipTests
+RUN mvnw clean package -DskipTests
 
 # Use a minimal Java runtime image to run the app
 FROM eclipse-temurin:17-jre
