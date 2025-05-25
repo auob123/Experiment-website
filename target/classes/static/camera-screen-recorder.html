@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Camera & Screen Recorder</title>
+  <style>
+    body {
+      margin: 0;
+      background: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    #container {
+      width: 80vw;
+      max-width: 900px;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    #preview {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #111;
+      border: 2px solid #444;
+      margin-bottom: 20px;
+    }
+    #controls {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:disabled {
+      background: #555;
+      cursor: not-allowed;
+    }
+    #status {
+      text-align: center;
+      margin-bottom: 10px;
+      min-height: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Camera & Screen Recorder</h1>
+  <div id="container">
+    <canvas id="preview"></canvas>
+    <div id="controls">
+      <button id="startBtn">Start</button>
+      <button id="stopBtn" disabled>Stop & Download</button>
+    </div>
+    <div id="status"></div>
+  </div>
+  <script>
+    const startBtn = document.getElementById('startBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const statusDiv = document.getElementById('status');
+    const canvas = document.getElementById('preview');
+    const ctx = canvas.getContext('2d');
+
+    let cameraStream = null;
+    let screenStream = null;
+    let cameraVideo = null;
+    let screenVideo = null;
+    let recorder = null;
+    let recordedChunks = [];
+    let animationFrameId = null;
+    let isRecording = false;
+
+    function setStatus(msg) {
+      statusDiv.textContent = msg;
+    }
+
+    async function startCapture() {
+      setStatus('Requesting camera and screen access...');
+      try {
+        cameraStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+      } catch (e) {
+        setStatus('Camera access denied.');
+        return;
+      }
+      try {
+        screenStream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true });
+      } catch (e) {
+        setStatus('Screen sharing denied.');
+        cameraStream.getTracks().forEach(t => t.stop());
+        return;
+      }
+
+      // Prepare video elements (not shown)
+      cameraVideo = document.createElement('video');
+      cameraVideo.srcObject = cameraStream;
+      cameraVideo.muted = true;
+      cameraVideo.play();
+
+      screenVideo = document.createElement('video');
+      screenVideo.srcObject = screenStream;
+      screenVideo.muted = true;
+      screenVideo.play();
+
+      // Wait for both videos to be ready
+      await Promise.all([
+        new Promise(res => cameraVideo.onloadedmetadata = res),
+        new Promise(res => screenVideo.onloadedmetadata = res)
+      ]);
+
+      // Set canvas size to match screen video
+      canvas.width = screenVideo.videoWidth;
+      canvas.height = screenVideo.videoHeight;
+
+      // Start drawing loop
+      isRecording = true;
+      drawLoop();
+
+      // Start recording
+      const canvasStream = canvas.captureStream(30);
+      // Merge audio: screen + camera
+      const audioTracks = [];
+      if (screenStream.getAudioTracks().length > 0) {
+        audioTracks.push(screenStream.getAudioTracks()[0]);
+      }
+      if (cameraStream.getAudioTracks().length > 0) {
+        audioTracks.push(cameraStream.getAudioTracks()[0]);
+      }
+      if (audioTracks.length > 0) {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const destination = audioContext.createMediaStreamDestination();
+        audioTracks.forEach(track => {
+          const src = audioContext.createMediaStreamSource(new MediaStream([track]));
+          src.connect(destination);
+        });
+        destination.stream.getAudioTracks().forEach(track => {
+          canvasStream.addTrack(track);
+        });
+      }
+
+      recorder = new MediaRecorder(canvasStream, { mimeType: 'video/webm; codecs=vp9,opus' });
+      recordedChunks = [];
+      recorder.ondataavailable = e => {
+        if (e.data.size > 0) recordedChunks.push(e.data);
+      };
+      recorder.onstop = saveRecording;
+      recorder.start();
+
+      setStatus('Recording...');
+
+      startBtn.disabled = true;
+      stopBtn.disabled = false;
+    }
+
+    function drawLoop() {
+      if (!isRecording) return;
+      // Draw screen on upper half, camera on lower half
+      const w = canvas.width;
+      const h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+
+      // Draw screen (upper half)
+      ctx.drawImage(screenVideo, 0, 0, w, h / 2);
+
+      // Draw camera (lower half)
+      // Maintain camera aspect ratio
+      const camAR = cameraVideo.videoWidth / cameraVideo.videoHeight;
+      const camW = w;
+      const camH = h / 2;
+      let drawW = camW, drawH = camH, offsetX = 0, offsetY = h / 2;
+      if (camW / camH > camAR) {
+        drawW = camH * camAR;
+        offsetX = (camW - drawW) / 2;
+      } else {
+        drawH = camW / camAR;
+        offsetY = h / 2 + (camH - drawH) / 2;
+      }
+      ctx.drawImage(cameraVideo, offsetX, offsetY, drawW, drawH);
+
+      animationFrameId = requestAnimationFrame(drawLoop);
+    }
+
+    function stopCapture() {
+      isRecording = false;
+      cancelAnimationFrame(animationFrameId);
+
+      if (recorder && recorder.state !== 'inactive') {
+        recorder.stop();
+      }
+
+      // Stop all tracks
+      if (cameraStream) cameraStream.getTracks().forEach(t => t.stop());
+      if (screenStream) screenStream.getTracks().forEach(t => t.stop());
+
+      startBtn.disabled = false;
+      stopBtn.disabled = true;
+      setStatus('Processing video...');
+    }
+
+    function saveRecording() {
+      const blob = new Blob(recordedChunks, { type: 'video/webm' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      a.download = 'recording.webm';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        setStatus('Recording saved and downloaded.');
+      }, 100);
+    }
+
+    startBtn.onclick = startCapture;
+    stopBtn.onclick = stopCapture;
+  </script>
+</body>
+</html>

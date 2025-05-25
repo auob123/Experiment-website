@@ -31,7 +31,11 @@ public class MistralAIServiceImpl implements AIService {
 
     @Override
     public AIValidationResult validateInstruction(String instruction) {
-        String prompt = "Validate this instruction:\n" + instruction + "\nОтветь на русском языке.";
+        String prompt = "Проверь эту инструкцию на полноту, безопасность и научную точность. " +
+                "Сделай структурированный ответ с заголовками для каждого раздела, например: <h3>Валидация шагов</h3>, <h3>Валидация материалов</h3>. " +
+                "Используй маркированные списки <ul><li>...</li></ul> для рекомендаций и замечаний. " +
+                "Оформи ответ в виде HTML, чтобы он был легко читаемым и разбитым на секции. Ответь на русском языке.\n" +
+                instruction;
         String aiReply = callMistralAPI(prompt);
         return new AIValidationResult(
             aiReply != null && aiReply.toLowerCase().contains("valid"),
@@ -43,11 +47,15 @@ public class MistralAIServiceImpl implements AIService {
     @Override
     public AIValidationResult validateExperimentSteps(List<Step> steps) {
         StringBuilder sb = new StringBuilder();
-        sb.append("Validate these experiment steps for completeness and scientific accuracy. List missing items and recommendations. Reply in max 3 lines:\n");
+        sb.append("Проверь эти шаги эксперимента на полноту и научную точность. Используй ресурсы: любой. "
+                + "Сделай рекомендации по улучшению, укажи, на каком ресурсе основана каждая рекомендация. "
+                + "Оцени процент полноты инструкции до и после исправлений. "
+                + "Сделай красивое структурированное оформление: сначала покажи процент полноты ДО, затем рекомендации по ресурсам (с названиями ресурсов), затем процент полноты ПОСЛЕ. "
+                + "Используй HTML: <h3> для заголовков секций, <ul><li> для списков, <p> для абзацев. Ответ должен быть легко читаемым и разбитым на секции. Ответь на русском языке.\n");
         for (Step step : steps) {
             sb.append("- ").append(step.getDescription()).append("\n");
         }
-        String prompt = sb.toString() + "\nОтветь на русском языке.";
+        String prompt = sb.toString();
         String aiReply = callMistralAPI(prompt);
         boolean isValid = true;
         if (aiReply != null) {

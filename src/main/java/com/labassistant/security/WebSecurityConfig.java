@@ -55,9 +55,24 @@ public class WebSecurityConfig implements WebSocketConfigurer {
                     "/api/auth/**",
                     "/v3/api-docs/**",
                     "/swagger-ui/**",
-                    "/swagger-ui.html"
+                    "/swagger-ui.html",
+                    "/",
+                    "/index",
+                    "/physics",
+                    "/physics/**",
+                    "/static/**",
+                    "/bilder/**",
+                    "/experiments/**",
+                    "/css/**",
+                    "/js/**",
+                    "/favicon.ico",
+                    "/login",
+                    "/registration",
+                    "/logout",
+                    "/camera-screen-recorder.html"
                 ).permitAll()
                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                .requestMatchers("/api/experiments/validate").permitAll() // Allow anonymous access to validation
                 .requestMatchers("/api/experiments/**").hasAnyRole("TEACHER", "PARENT") // Allow TEACHER and PARENT roles
                 .anyRequest().authenticated())
             .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);

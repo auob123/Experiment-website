@@ -1,0 +1,1745 @@
+/* ------------------------------ BREAKING POINTS ------------------------------ */
+
+/* Koden är i default skriven för desktop (1200-1799px). Övriga skärmstorlekar som används är (copy-pasta där det behövs):
+
+@media screen and (max-width: 519px) { }							Stående mobil
+@media screen and (min-width: 520px) and (max-width: 899px) { }		Liggande mobil och stående padda
+@media screen and (min-width: 900px) and (max-width: 1199px) { }	Liggande padda
+@media screen and (min-width: 1800px) and (max-width: 1919px)		Stora desktop-skärmar
+@media screen and (min-width: 1920px)								Maxbredd på sidan
+
+
+Tidigare hade jag en breaking point vid 600 istället för 520, men sen insåg jag att man vill kunna lägga mobilen ned för att få två rader med polaroidbilder.
+
+*/
+
+
+/* ------------------------------ SAJTENS RESPONSIVITET ------------------------------ */
+
+/* 
+Stående mobil						1 polaroid
+Liggande mobil och stående padda	2 polaroid
+Liggande padda						2 polaroid
+Desktop								3 polaroid
+Stora desktop-skärmar				4 polaroid
+1920px								4 polaroid och maxbredd på sidan
+
+Sajten är totalt responsiv. I stort sett alla bredder och textstorlekar är angivna i vw. Experimentinstruktionerna har en maxbredd på 775 px. Övriga sajten 1920 px. Vid 1920 px får saker och ting en fast bredd i px/em i stället för vw (annars ökar exempelvis textstorleken med skärmens bredd, trots att sajten inte ökar i bredd).
+
+*/
+
+
+
+
+
+
+
+
+/* ------------------------------ UTSKRIFT (FINNS ÄVEN VID VARIANT-STYCKET) ------------------------------ */
+
+#utskriftstabell { width: 100%; }
+
+.sidtopp_utskrift, .space_sidtopp_utskrift, .sidfot_utskrift, .space_sidtopp_utskrift { display: none; }
+
+/* Sidtoppsbild vid utskrift (se print-stylesheet) */
+#sidtoppsbild_utskrift { display: none; }
+
+.endast_vid_utskrift { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ ALLMÄNT ------------------------------ */
+
+/* Gör att border och padding inte adderar area */
+* {
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* Får : tillsammans med ~ att funka i tidiga android-versioner */
+body { -webkit-animation: bugfix infinite 1s; }
+@-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } }
+
+/* Förhindrar att Safari på mobil i liggande läge automatiskt ändrar storlek på font ibland. För mig var välkomsttexten för stor på några huvudsidor och det kursiva "jorden" och "rymden" i kategoriingresserna för små. Helt stört, men det här fixade det. */
+@media screen and (max-device-width: 480px){ body { -webkit-text-size-adjust: none; } }
+
+html {
+	overflow-x: hidden;		/* Förhindrar scrolling/wobbling i x-led på mobil. */
+}
+
+body {				/* Inklusive brödtext, vilken ligger till grund till alla em-hänvisningar */
+	width: 100%;
+	background-color: #ffffff;
+	font-family: 'Mali';
+	font-size: 1.6vw;
+	color: #333;
+	margin: 0;
+	/* Tar bort default-marginaler som body annars har. Detta behövs för att korrekt kunna positionera fixed-positionerade divar, eftersom dessa ignorerar bodys marginaler, medan andra divar inte gör det. */
+	overflow-x: hidden;
+	/* Tar bort horisontella scrollbaren som dyker upp när sneda polaroidfoton hamnar utanför body. */
+	/* background-image: url("bilder/bakgrundspapper.jpg"); */
+}
+
+@media screen and (max-width: 519px) { body { font-size: 5vw; } }							
+@media screen and (min-width: 520px) and (max-width: 899px) { body { font-size: 2.4vw; } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { body { font-size: 2.4vw; } }
+@media screen and (min-width: 1800px) and (max-width: 1919px) { body { font-size: 1.2vw; } }
+@media screen and (min-width: 1920px) { body { font-size: 22px; } }
+
+a:link { color: #3a67a9; text-decoration: none; }
+a:visited { color: #3a67a9; text-decoration: none; }
+a:active { color: #3a67a9; text-decoration: none; }
+a:hover { color: #3a67a9; text-decoration: none; }
+
+a.valkomsttext:link { color: #000; text-decoration: none; }
+a.valkomsttext:visited { color: #000; text-decoration: none; }
+a.valkomsttext:active { color: #000; text-decoration: none; }
+a.valkomsttext:hover { color: #000; text-decoration: none; }
+
+/* Gör att telefonnummer-länkar inte automatiskt formateras av olika webbläsare. */
+a[href^="tel"], a[href^="mailto"] {
+	color: inherit;
+	font-weight: inherit;
+	text-decoration: none;
+}
+
+h1 {						/* Grund för samtliga h1-rubriker */
+	text-align: center;
+	font-size: 4vw;
+	font-weight: 600;
+	color: #df4b1f;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	/* text-shadow: 0.1vw 0.1vw 0.1vw rgba(0,0,0,0.9); */
+}
+
+@media screen and (max-width: 519px) { h1 { font-size: 10vw; margin-top: 0px; } }			/* x 2,5 */
+@media screen and (min-width: 520px) and (max-width: 899px) { h1 { font-size: 6.6vw; margin-top: 10px; } }	/* x 1,9 */
+@media screen and (min-width: 900px) and (max-width: 1199px) { h1 { font-size: 5.6vw; } }	/* x 1,4 */
+@media screen and (min-width: 1800px) and (max-width: 1919px) { h1 { font-size: 3.5vw; } }
+@media screen and (min-width: 1920px) { h1 { font-size: 58px; } }
+
+h1.startsidan {
+	font-size: 1.5em;
+	margin-bottom: 5px;
+}
+
+.startsidan_senaste_innan_rubrik {
+	display: inline-block;
+	font-size: 4vw;
+	font-weight: 600;
+	color: #df4b1f;
+}
+
+@media screen and (max-width: 519px) { .startsidan_senaste_innan_rubrik { font-size: 10vw; } }							/* x 2,5 */
+@media screen and (min-width: 520px) and (max-width: 899px) { .startsidan_senaste_innan_rubrik { font-size: 6.6vw; } }	/* x 1,9 */
+@media screen and (min-width: 900px) and (max-width: 1199px) { .startsidan_senaste_innan_rubrik { font-size: 5.6vw; } }	/* x 1,4 */
+@media screen and (min-width: 1800px) and (max-width: 1919px) { .startsidan_senaste_innan_rubrik { font-size: 3.5vw; } }
+@media screen and (min-width: 1920px) { .startsidan_senaste_innan_rubrik { font-size: 58px; } }
+
+h1.startsidan_experiment_rubrik {
+	display: inline-block;
+	margin-bottom: 30px;
+}
+
+@media screen and (max-width: 519px) { h1.startsidan_experiment_rubrik { margin-bottom: 20px; } }							
+@media screen and (min-width: 520px) and (max-width: 899px) { h1.startsidan_experiment_rubrik { margin-bottom: 20px; } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { h1.startsidan_experiment_rubrik { margin-bottom: 30px; } }
+
+/* För h1.experimentrubrik - se experiment-stycket. */
+
+h1.kategorirubrik {
+	margin-bottom: 10px;
+}
+
+h1.experimentkurs {
+	margin-bottom: 40px;
+}
+
+h1.lararhandledning {
+	margin-bottom: 0px;
+}
+
+h1.liknande {
+	margin-top: 80px;
+	margin-bottom: 10px;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+h1.temarubrik {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.tema_innan_rubrik {						/* Samma font-size som h1.experimentrubrik */
+	display: inline-block;
+	font-size: 4vw;
+	font-weight: 600;
+	color: #ffdd1e;
+}
+
+@media screen and (max-width: 519px) { .tema_innan_rubrik { font-size: 10vw; } }							/* x 2,5 */
+@media screen and (min-width: 520px) and (max-width: 899px) { .tema_innan_rubrik { font-size: 7.6vw; } }	/* x 1,9 */
+@media screen and (min-width: 900px) and (max-width: 1199px) { .tema_innan_rubrik { font-size: 5.6vw; } }	/* x 1,4 */
+@media screen and (min-width: 1800px) and (max-width: 1919px) { .tema_innan_rubrik { font-size: 3.5vw; } }
+@media screen and (min-width: 1920px) { .tema_innan_rubrik { font-size: 58px; } }
+
+.special_innan_rubrik {						/* Samma font-size som h1.experimentrubrik */
+	text-align: center;
+	font-size: 4vw;
+	font-weight: 600;
+	color: #333;			/* Tidigare #ffdd1e; */
+	margin-top: 20px;
+	line-height: 1.2;		/* Samma som h1.experimentrubrik */
+}
+
+@media screen and (max-width: 519px) { .special_innan_rubrik { font-size: 10vw; } }							/* x 2,5 */
+@media screen and (min-width: 520px) and (max-width: 899px) { .special_innan_rubrik { font-size: 7.6vw; } }	/* x 1,9 */
+@media screen and (min-width: 900px) and (max-width: 1199px) { .special_innan_rubrik { font-size: 5.6vw; } } /* x 1,4 */
+@media screen and (min-width: 1800px) and (max-width: 1919px) { .special_innan_rubrik { font-size: 3.5vw; } }
+@media screen and (min-width: 1920px) { .special_innan_rubrik { font-size: 58px; } }
+
+h2 {
+	font-size: 3vw;
+	font-weight: 600;
+	color: #333;
+	margin-top: 60px;
+	margin-bottom: 15px;
+}
+
+@media screen and (max-width: 519px) { h2 { font-size: 8.5vw; margin-top: 35px; } }			
+@media screen and (min-width: 520px) and (max-width: 899px) { h2 { font-size: 4.7vw;  margin-top: 40px; } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { h2 { font-size: 4.2vw; } }
+@media screen and (min-width: 1800px) and (max-width: 1919px) { h2 { font-size: 2.5vw; } }
+@media screen and (min-width: 1920px) { h2 { font-size: 44px; } }
+
+h2.varningsrubrik, h2.miljorubrik {
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 7px;
+}
+
+h2.experimentkurs {
+	text-align: center;
+	color: #000;
+}
+
+@media screen and (max-width: 519px) { h2.experimentkurs { margin-top: 50px; } }
+
+h2.lararhandledning {
+	text-align: center;
+	color: #df4b1f;
+	margin-top: 60px;
+}
+
+h2.lararhandledning_underrubrik {
+	text-align: center;
+	color: #df4b1f;
+	margin-top: 0px;
+	margin-bottom: 40px;
+	font-weight: 500;
+}
+
+@media screen and (max-width: 519px) { h2.lararhandledning_underrubrik { font-size: 6.5vw; } }	
+
+h2.steg1, h2.steg, h2.steg_vid_riktiga_kolumner {
+	margin-bottom: 5px;
+}
+
+h3 {
+	font-size: 2.3vw;
+	font-weight: 600;
+	margin-top: 60px;
+	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 519px) { h3 { font-size: 7.2vw; } }							
+@media screen and (min-width: 520px) and (max-width: 899px) { h3 { font-size: 4.37vw; } }	/* x 1,9 */
+@media screen and (min-width: 900px) and (max-width: 1199px) { h3 { font-size: 3.22vw; } }	/* x 1,4 */
+@media screen and (min-width: 1800px) and (max-width: 1919px) { h3 { font-size: 1.8vw; } }
+@media screen and (min-width: 1920px) { h3 { font-size: 35px; } }
+
+h4 {	/* Samma som brödtext fast fet */
+	font-weight: 600;
+	text-align: left;
+	margin-top: 35px;
+	margin-bottom: 5px;
+}
+
+ul { margin-top: 0px; }
+
+hr {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	width: 90%;
+	border: 1px solid #df4b1f;
+}
+
+sub { vertical-align: baseline; line-height: 0; position: relative; bottom: -0.25em;}
+sup { vertical-align: super; line-height:0; font-weight:normal !important; white-space: nowrap;}
+
+.referenser_vanster { float: left; font-size: 0.8em;}
+.referenser_hoger { float: right; width: calc(100% - 35px); font-size: 0.8em;}
+.referenser_clearboth { clear: both; }
+#not1 {border-top:0px solid #fff;}
+#not1:target {background-color: #e1e1e1;}
+#not2 {border-top:0px solid #fff;}
+#not2:target {background-color: #e1e1e1;}
+#not3 {border-top:0px solid #fff;}
+#not3:target {background-color: #e1e1e1;}
+#not4 {border-top:0px solid #fff;}
+#not4:target {background-color: #e1e1e1;}
+#not5 {border-top:0px solid #fff;}
+#not5:target {background-color: #e1e1e1;}
+#not6 {border-top:0px solid #fff;}
+#not6:target {background-color: #e1e1e1;}
+#not7 {border-top:0px solid #fff;}
+#not7:target {background-color: #e1e1e1;}
+#not8 {border-top:0px solid #fff;}
+#not8:target {background-color: #e1e1e1;}
+#not9 {border-top:0px solid #fff;}
+#not9:target {background-color: #e1e1e1;}
+#not10 {border-top:0px solid #fff;}
+#not10:target {background-color: #e1e1e1;}
+
+.rot1 {
+	-ms-transform: rotate(1deg); /* IE 9 */
+	-webkit-transform: rotate(1deg); /* Safari 3-8 */
+	transform: rotate(1deg);
+}
+
+.rot-1 {
+	-ms-transform: rotate(-1deg); /* IE 9 */
+	-webkit-transform: rotate(-1deg); /* Safari 3-8 */
+	transform: rotate(-1deg);
+}
+
+.rot2 {
+	-ms-transform: rotate(2deg); /* IE 9 */
+	-webkit-transform: rotate(2deg); /* Safari 3-8 */
+	transform: rotate(2deg);
+}
+
+.rot-2 {
+	-ms-transform: rotate(-2deg); /* IE 9 */
+	-webkit-transform: rotate(-2deg); /* Safari 3-8 */
+	transform: rotate(-2deg);
+}
+
+.rot20 {							/* Endast för knappnål */
+	-ms-transform: rotate(20deg); 	/* IE 9 */
+	-webkit-transform: rotate(20deg); /* Safari 3-8 */
+	transform: rotate(20deg);
+}
+
+.rot-20 {							/* Endast för knappnål */
+	-ms-transform: rotate(-20deg); 	/* IE 9 */
+	-webkit-transform: rotate(-20deg); /* Safari 3-8 */
+	transform: rotate(-20deg);
+}
+
+
+.mellanrum_mellan_senaste_och_sidfoten { height: 250px; }
+.mellanrum_mellan_liknande_och_senaste { height: 60px; }
+.mellanrum_mellan_popularaste_och_senaste { height: 60px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ SIDTOPPEN ------------------------------ */
+
+#sidtoppswrapper {
+	position: relative;
+    width: 100%;
+	max-width: 1920px;	
+	left: 0; 						/* Centrerar */
+	right: 0; 						/* Centrerar */
+	margin-left: auto; 				/* Centrerar */
+	margin-right: auto; 			/* Centrerar */
+	border: 0px solid #00ffff;
+	margin-top: 5px;				/* Avstånd mellan sidtopp och toppkant av webbläsare. */
+	margin-bottom: 50px;			/* Avstånd mellan sidtopp och rubrik. */
+}
+
+/* Sidtoppsbild på alla devices (även engelska) */
+#sidtoppsbild, #sidtoppsbild_eng {
+	position: relative;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+	border: 0px solid #ffff00;
+}
+
+/* Sidtoppsbild på mobil och platta */
+#sidtoppsbild {
+	background-image: url("/bilder/sidtopp_mobil_1024.png");
+	padding-top: 30.00%; /* = höjden delat med bredden på bilden */
+}
+
+/* Sidtoppsbild på desktop */
+@media only screen and (min-width: 750px) {
+    #sidtoppsbild {
+	background-image: url("/bilder/sidtopp_desktop_1920.png");
+	padding-top: 14.01%; /* = höjden delat med bredden på bilden */
+}
+}
+
+/* Sidtoppsbild på mobil och platta (engelska) */
+#sidtoppsbild_eng {
+	background-image: url("/-eng/bilder/sidtopp_mobil_1024.png");
+	padding-top: 30.00%; /* = höjden delat med bredden på bilden */
+}
+
+/* Sidtoppsbild på desktop (engelska) */
+@media only screen and (min-width: 750px) {
+    #sidtoppsbild_eng {
+	background-image: url("/-eng/bilder/sidtopp_desktop_1920.png");
+	padding-top: 14.01%; /* = höjden delat med bredden på bilden */
+}
+}
+
+.osynlig-checkbox {
+	display: none;
+} 
+
+.menyknapp {
+	cursor: pointer;
+	position: absolute;
+	width: 15%;
+	top: 25%;
+	right: 3.2%;
+	padding-top: 15%;
+	z-index: 999;
+	border: 0px solid #ff0000;
+
+}
+
+/* Menyknapp vid större sidtoppsbild */
+@media only screen and (min-width: 750px) {
+.menyknapp {
+/*	border: 0.4vw solid #777;
+	border-radius: 10%; */
+	width: 9%;
+	top: 0%;			/* I förhållande till browser-fönstret. */
+	margin-top: 2.5%;	/* I förhållande till skärmen. */
+	right: 1.2%;		/* I förhållande till browser-fönstret. */
+	padding-top: 9%; 	/* = höjden delat med bredden på bilden. Samma som width=kvadrat. */
+}
+}
+
+/*Menyknapp vid större skärm, där knappen får plats att följa med på sidan. */
+/*@media only screen and (min-width: 950px) {
+.menyknapp {
+	position: fixed;
+}
+} */
+
+.osynlig-checkbox:checked ~ #dropdown {
+	visibility: visible;
+	opacity: 1;
+}
+
+.osynlig-checkbox:checked ~ .fb-page_container {
+	display: block;
+}  
+
+.fb-page_container {
+	display: none;
+	z-index: 1000;
+	position: absolute;
+	top: 820px;
+	height: 70px;					/* Förhindrar content jumping */
+	overflow: hidden;				/* Förhindrar content jumping */
+	left: 50%;						/* Centrera */
+	transform: translateX(-50%);	/* Centrera */
+}
+
+.menyknapp .mittenstreck {
+	display: block;
+	height: 0.8vw;
+	width: 70%;				/* Om jag ska ändra storlek på menyknappen, ändra .menyknapp! */
+	position: absolute;
+	top: 50%;
+	left: 0; 				/* Centrerar */
+	right: 0; 				/* Centrerar */
+	margin-left: auto; 		/* Centrerar */
+	margin-right: auto; 	/* Centrerar */
+	background: #df4b1f;
+	border-radius: 2px;
+	transition: all .5s;
+	transform: rotate(180deg);
+	-ms-transform: rotate(180deg); 		/* IE 9 */
+	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+}
+
+/* Mittenstreck vid större sidtoppsbild */
+@media only screen and (min-width: 750px) { .menyknapp .mittenstreck { height: 0.4vw; } }
+
+/* Mittenstreck vid sidans maxbredd */
+@media only screen and (min-width: 1920px) { .menyknapp .mittenstreck { width: 70px; height: 5px; } }
+
+
+
+.menyknapp .mittenstreck:before,
+.menyknapp .mittenstreck:after {
+	content: '';
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background: #df4b1f;
+	border-radius:2px;
+	transition: all .2s ease-out;
+	transform: rotate(180deg);
+	-ms-transform: rotate(180deg); /* IE 9 */
+	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+}
+
+.menyknapp .mittenstreck:before { top: 3.5vw; }
+
+/* Övre streck vid större sidtoppsbild */
+@media only screen and (min-width: 750px) { .menyknapp .mittenstreck:before { top: 1.8vw; } }
+
+/* Övre streck vid max sidbredd */
+@media only screen and (min-width: 1920px) { .menyknapp .mittenstreck:before { top: 25px; } }
+ 
+.menyknapp .mittenstreck:after { top: -3.5vw; }
+
+/* Undre streck vid större sidtoppsbild */
+@media only screen and (min-width: 750px) { .menyknapp .mittenstreck:after { top: -1.8vw; } }
+
+/* Undre streck vid max sidbredd */
+@media only screen and (min-width: 1920px) { .menyknapp .mittenstreck:after { top: -25px; } }
+
+.osynlig-checkbox:checked ~ .menyknapp .mittenstreck {
+	transform: rotate(225deg);
+	-ms-transform: rotate(225deg); /* IE 9 */
+	-webkit-transform: rotate(225deg); /* Chrome, Safari, Opera */
+	width: 11vw;
+}
+
+/* Klickat: mittenstreck vid större sidtoppsbild */
+@media only screen and (min-width: 750px) {
+.osynlig-checkbox:checked ~ .menyknapp .mittenstreck {
+	width: 6vw;	
+}
+}
+
+/* Klickat: mittenstreck vid max sidbredd */
+@media only screen and (min-width: 1920px) {
+.osynlig-checkbox:checked ~ .menyknapp .mittenstreck {
+	width: 85px;	
+}
+}
+
+.osynlig-checkbox:checked ~ .menyknapp .mittenstreck:before {
+	background: transparent;
+}
+ 
+.osynlig-checkbox:checked ~ .menyknapp .mittenstreck:after {
+	transform: rotate(275deg);
+	-ms-transform: rotate(275deg); /* IE 9 */
+	-webkit-transform: rotate(275deg); /* Chrome, Safari, Opera */
+	width: 11vw;
+}
+ 
+/* Klickat: Nedre streck vid större sidtoppsbild */
+@media only screen and (min-width: 750px) {
+.osynlig-checkbox:checked ~ .menyknapp .mittenstreck:after {
+	width: 6vw;	
+}
+}
+
+/* Klickat: Nedre streck vid max sidbredd */
+@media only screen and (min-width: 1920px) {
+.osynlig-checkbox:checked ~ .menyknapp .mittenstreck:after {
+	width: 85px;	
+}
+}
+ 
+.osynlig-checkbox:checked ~ .menyknapp .mittenstreck:before,
+.osynlig-checkbox:checked ~ .menyknapp .mittenstreck:after {
+	top: 0;
+}
+
+#dropdown {
+	position: absolute;
+	top: 0%;			/* I förhållande till sidtoppen. */
+	left: 0;			/* Centrerar diven */
+	right: 0;			/* Centrerar diven */
+	margin-left: auto;	/* Centrerar diven */
+	margin-right: auto;	/* Centrerar diven */
+	display: block;
+	visibility: hidden;
+	width: 100%;
+	margin: auto;
+	height: auto;
+	z-index: 998;
+	background: rgba(255, 255, 255, 0.96); 						/* Vit bakgrund med transparens */
+	transition: visibility 0.2s, opacity 0.2s linear;
+	opacity: 0; 
+	overflow: hidden; 
+	padding-bottom: 250px;
+	border: 0px solid #333333;
+	-webkit-box-shadow: 0px 9px 67px 68px rgba(255,255,255,1);	/* Snygg fade i botten */
+	-moz-box-shadow: 0px 9px 67px 68px rgba(255,255,255,1);		/* Snygg fade i botten */
+	box-shadow: 0px 9px 67px 68px rgba(255,255,255,1);			/* Snygg fade i botten */
+}
+
+#bokstapel {
+	width: 100%;
+	max-width: 300px;
+	opacity: 1.0;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.valkommentext { /* Från början angavs font-size i em, men då blev det konstiga variationer jag aldrig förstod. Den är nu angiven i vw. */
+	position: relative;
+	width: 100%;
+	max-width: 775px;
+	top: -50px;
+	left: 0; 						/* Centrerar */
+	right: 0; 						/* Centrerar */
+	margin-left: auto; 				/* Centrerar */
+	margin-right: auto; 			/* Centrerar */
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: -20px;
+	text-align: center;
+	color: #333;
+	font-weight: 400;
+	font-size: 0.8em;
+	/* text-shadow: 0.01vw 0.01vw 0.01vw rgba(0,0,0,0.9); */
+}
+
+@media screen and (max-width: 519px) { .valkommentext { font-size: 0.8em; } }							
+@media screen and (min-width: 520px) and (max-width: 899px) { .valkommentext { font-size: 1em; } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { .valkommentext { font-size: 0.8em; } }
+@media screen and (min-width: 1800px) and (max-width: 1919px) { .valkommentext { font-size: 0.8em; } }
+@media screen and (min-width: 1920px) { .valkommentext { font-size: 0.8em; } }
+
+.annonstext {
+	position: relative;
+	width: 100%;
+	max-width: 775px;
+	top: -50px;
+	left: 0; 						/* Centrerar */
+	right: 0; 						/* Centrerar */
+	margin-left: auto; 				/* Centrerar */
+	margin-right: auto; 			/* Centrerar */
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	text-align: center;
+	color: #333;
+	font-weight: 400;
+	font-size: 0.8em;
+}
+
+@media screen and (max-width: 519px) { .valkommentext { font-size: 0.8em; } }							
+@media screen and (min-width: 520px) and (max-width: 899px) { .valkommentext { font-size: 1em; } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { .valkommentext { font-size: 0.8em; } }
+@media screen and (min-width: 1800px) and (max-width: 1919px) { .valkommentext { font-size: 0.8em; } }
+@media screen and (min-width: 1920px) { .valkommentext { font-size: 0.8em; } }
+
+.fb-page_container_valkomsttext {
+	position: relative;
+	display: block;
+	height: 70px;					/* Förhindrar content jumping */
+	overflow: hidden;				/* Förhindrar content jumping */
+	text-align: center;
+	margin-bottom: 30px;
+	border: 0px solid #333;
+}
+
+a.fb-page-lank {
+	color: rgba(0, 0, 0, 0.0);
+}
+
+video.experimentkurs {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+	width: 100%;
+	max-width: 775px;
+	height: auto;
+	margin-bottom: 50px;
+}
+
+#experimentkurs_reklamlapp {
+	text-align: center;
+	margin-top: -90px;
+	margin-bottom: 35px;
+}
+
+@media screen and (max-width: 519px) { #experimentkurs_reklamlapp { margin-bottom: 55px; } }
+
+#experimentkurs_reklamlapp a:link { color: #000; text-decoration: none; }
+#experimentkurs_reklamlapp a:visited { color: #000; text-decoration: none; }
+#experimentkurs_reklamlapp a:active { color: #000; text-decoration: none; }
+#experimentkurs_reklamlapp a:hover { color: #000; text-decoration: none; }
+
+#experimentkurs_klicka_har {
+	text-align: center;
+	font-weight: 600;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------ KATEGORISIDORNA ------------------------------ */
+
+.kategoriingress {
+	position: relative;
+	width: 100%;
+	max-width: 775px;
+	margin-bottom: 30px; 
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	color: #000;			/* Förut: #df4b1f; */
+	font-weight: 400;
+	font-size: 0.8em;
+}
+
+@media screen and (max-width: 519px) { .kategoriingress { font-size: 0.8em; } }							
+@media screen and (min-width: 520px) and (max-width: 899px) { .kategoriingress { font-size: 0.8em; } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { .kategoriingress { font-size: 0.8em; } }
+@media screen and (min-width: 1800px) and (max-width: 1919px) { .kategoriingress { font-size: 0.8em; } }
+@media screen and (min-width: 1920px) { .kategoriingress { font-size: 0.8em; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ POLAROIDBILDERNA ------------------------------ */
+
+
+.mastercontainer {
+	overflow: hidden; 
+	/* Förhindrar en extra, ful, scrollbar som dyker upp när en roterad polaroidbild sticker ut utanför body längst ner. */
+	width: 100%;
+	max-width: 1920px;
+	border: 0px solid #ff0000;	
+}
+
+.polaroidcontainer {
+	vertical-align: top;
+	display: inline-block;
+	position: relative;
+	/* Betyder att diven hamnar som vanligt i sidans normala flöde. Betyder inget extra egentligen, men denna div måste ha denna ifylld för att children-element ska kunna positioneras i relation till den */
+	/* Denna parent-div har ingen höjd. Så blir det tydligen när alla children-element har position: absolute. */
+	border: 0px solid #ff0000;
+	width: calc(32%);
+	margin-bottom: 15px;
+}
+
+@media screen and (max-width: 519px) { .polaroidcontainer { width: calc(100%); } }
+@media screen and (min-width: 520px) and (max-width: 899px) { .polaroidcontainer { width: calc(48%); } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { .polaroidcontainer { width: calc(48%); } }
+@media screen and (min-width: 1800px) and (max-width: 1919px) { .polaroidcontainer { width: calc(24%); } }
+@media screen and (min-width: 1920px) { .polaroidcontainer { width: 460px; } }
+
+.polaroidcontainer_inre {
+	/* Denna, extra, inre container behövs också. Endast denna kunde jag få till att ha en bestämd höjd. Vilket behövs för att positionera kommande children-divar rätt i höjdled. Kanske går det att få bort en av containrarna, men jag lyckades inte. */
+	position: relative;
+	max-width: 100%;						/* Gör diven responsiv. */
+	padding-top: 110%;						/* Känt knep för att få höjden till en viss procent av bredden */
+	top: 0; bottom: 0; left: 0; right: 0;	/* Gör att diven stretchar ut till kanterna av polaroidcontainer. */
+	border: 0px solid #00ff00;
+}
+
+.polaroidram{
+    position: absolute; 		/* Positionerar bilden i relation till polaroidcontainer_inre */
+	left: 4%; top: 1%;
+	width: 95.35%;				/* Gör bilden responsiv. 410 av 430. */
+	border: 0px solid #00ff00;
+}
+	
+.knappnal{
+	z-index: 1; 
+	position: absolute; 		/* Positionerar bilden i relation till polaroidcontainer_inre */
+	left: 48%; top: -4%;
+	width: 11.63%;				/* Gör bilden responsiv. 50 av 430. */
+	border: 0px solid #00ff00;
+}
+	
+.polaroidfoto{
+	z-index: -3;
+    position: absolute;			/* Positionerar bilden i relation till polaroidcontainer_inre */
+	left: 8.7%; top: 4.5%;
+	width: 83.72%;				/* Gör bilden responsiv. 360 av 430. */
+	border: 0px solid #0000ff;
+}
+
+.polaroidtextruta{
+	position: absolute;
+	width: 87,21%;				/* Gör textrutan responsiv. 375 av 430. */
+	top: 61%; bottom: 3%; left: 9.5%; right: 8%;
+	/* overflow: ;			Gör att text som hamnar utanför diven  blir osynlig */
+	border-radius: 0 0 50px 0;
+	overflow: hidden;
+	border: 0px solid #00ffff;
+}
+
+.polaroidrubrik{
+	text-align: left;
+	color: #000;
+	background-color: none;
+	font-size: 2vw;
+	margin-top: 1%;
+	margin-bottom: 0%;
+	border: 0px solid #00ff00;
+}
+
+@media screen and (max-width: 519px) { .polaroidrubrik { font-size: 6vw; } }
+@media screen and (min-width: 520px) and (max-width: 899px) { .polaroidrubrik { font-size: 2.8vw; } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { .polaroidrubrik { font-size: 3vw; } }
+@media screen and (min-width: 1800px) and (max-width: 1919px) { .polaroidrubrik { font-size: 1.5vw; } }
+@media screen and (min-width: 1920px) { .polaroidrubrik { font-size: 29px; } }
+
+.polaroidkategori {
+	text-align: left;
+	font-size: 0.8em;
+	color: #df4b1f;
+	background-color: none;
+	font-weight: 600;
+	border: 0px solid #ffff00;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+/* Man kan tro att polaroidkategorin inte är responsiv, men "em" syftar på brödtexten, och den är ju det. */
+@media screen and (max-width: 519px) { .polaroidkategori { font-size: 0.8em; } }
+@media screen and (min-width: 520px) and (max-width: 899px) { .polaroidkategori { font-size: 0.8em; } }
+@media screen and (min-width: 900px) and (max-width: 1199px) { .polaroidkategori { font-size: 0.8em; } }
+@media screen and (min-width: 1800px) and (max-width: 1919px) { .polaroidkategori { font-size: 0.8em; } }
+@media screen and (min-width: 1920px) { .polaroidkategori { font-size: 0.8em; } }
+
+.polaroidingress{				/* Ställ in font-size så det får plats tre rader */
+	text-align: left;
+	font-size: 1.6vw;			/* Samma som brödtext */
+	color: #333;
+	background-color: none;
+	border: 0px solid #ffff00;
+}
+
+@media screen and (max-width: 519px) { .polaroidingress { font-size: 5vw; } }
+@media screen and (min-width: 520px) and (max-width: 899px) { .polaroidingress { font-size: 2.4vw; } }
+/* Samma som brödtext */
+@media screen and (min-width: 900px) and (max-width: 1199px) { .polaroidingress { font-size: 2.4vw; } }
+/* Samma som brödtext */
+@media screen and (min-width: 1800px) and (max-width: 1919px) { .polaroidingress { font-size: 1.2vw; } }
+@media screen and (min-width: 1920px) { .polaroidingress { font-size: 23px; } }
+
+.polaroidtextruta_rot1{
+	top: 61%; bottom: 3%; left: 8.75%; right: 8.5%;
+	-ms-transform: rotate(1deg); /* IE 9 */
+	-webkit-transform: rotate(1deg); /* Safari 3-8 */
+	transform: rotate(1deg);
+}
+
+.polaroidtextruta_rot-1{
+	top: 61%; bottom: 3%; left: 9.75%; right: 7.5%;
+	-ms-transform: rotate(-1deg); /* IE 9 */
+	-webkit-transform: rotate(-1deg); /* Safari 3-8 */
+	transform: rotate(-1deg);
+}
+
+.polaroidtextruta_rot2{
+	top: 61%; bottom: 3%; left: 8%; right: 9.5%;
+	-ms-transform: rotate(2deg); /* IE 9 */
+	-webkit-transform: rotate(2deg); /* Safari 3-8 */
+	transform: rotate(2deg);
+}
+
+.polaroidtextruta_rot-2{
+	top: 61%; bottom: 3%; left: 10.5%; right: 7%;
+	-ms-transform: rotate(-2deg); /* IE 9 */
+	-webkit-transform: rotate(-2deg); /* Safari 3-8 */
+	transform: rotate(-2deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ EXPERIMENT ------------------------------ */
+
+#ytterwrapper {
+/* Denna behövs för att centrera experimentinstruktionerna. */
+	position: relative;
+	margin: auto;		/* Centrerar diven. */
+	max-width: 775px;
+	width: 100%;
+	border: 0px solid #ff0000;
+}
+
+#innerwrapper {
+/* Denna behövs för att ge marginaler mot browserns kanter. */
+	position: relative;
+	margin-left: 3.5%;
+	margin-right: 3.5%;
+	border: 0px solid #00ff00;
+}
+
+.experimentrubrik_och_skrivare_wrapper {
+	position: relative;
+	display: block;
+	width: 100%;
+	border: 0px solid #000;
+}
+
+.experimentrubrik_wrapper {
+	display: block;
+	position: static;
+	left: 0; 				/* Centrerar */
+	right: 0; 				/* Centrerar */
+	margin-left: auto; 		/* Centrerar */
+	margin-right: auto; 	/* Centrerar */
+	text-align: center;
+	width: 83%;
+	border: 0px solid #f00;
+}
+
+/* Måste vara vid samma screen size som när skrivaren försvinner (se nedan). */
+@media screen and (max-width: 519px) { .experimentrubrik_wrapper {width: 99%; } }
+
+h1.experimentrubrik {
+	color: #333;
+	font-weight: 600;
+	display: inline;			/* h1-h6 är annars block. */ 
+	line-height: 1.2;
+}
+
+img.skrivare {
+	width: 8%;
+	position: absolute;
+	right: 0;
+	bottom: 7px;
+	border: 0px solid #0f0;
+}
+
+/* Måste vara vid samma screen size som när experimentrubrik_wrapper blir 100% bred (se ovan). */
+@media screen and (max-width: 519px) { img.skrivare {display:none; } }
+
+.kategori {
+	text-align: center;
+	font-weight: 600;
+	color: #df4b1f;
+	margin-bottom: 10px;
+}
+
+.ingress {
+	text-align: center;
+	font-weight: 600;
+}
+
+.gilla-tabell, td {
+	border-collapse: collapse;
+	border: 0px solid black;
+}
+
+.gilla-tabell {
+	display: none;
+	position: relative;
+	margin-bottom: 10px;
+	margin-top: 50px;
+	left: 50%;						/* Centrera */
+	transform: translateX(-50%);	/* Centrera */
+	font-size: 0.8em;
+	padding: 0;
+}
+
+
+.gilla-tabell_ovre_rad {
+	text-align: center;
+}
+
+.gilla-tabell_tom_kolumn {
+	width: 3vw;
+}	
+
+.addthis_inline_share_toolbox {
+	text-align: center;
+	margin-top: 5px;
+	border: 0px solid #00ffff;
+}
+
+.youtubecontainer { 
+	position: relative; 
+	width: 100%;
+	padding-top: 70%;			/* Känt knep för att få höjden till en viss procent av bredden */
+	border: 0px solid #00ff00;
+}
+
+.youtuberam{
+	z-index: 1;
+	position: absolute; 		/* Positionerar bilden i relation till container. */
+	left: 0; top: 0;
+	width: 100%;				/* Gör bilden responsiv. */
+	pointer-events: none;		/* Gör att bilden inte svarar på musevents, trots att den ligger överst. */
+	/* I gamla IE funkar inte pointer-events. Nedanstående kod ska fixa detta. Men testa vid läge. OM det visar sig att den inte gör det, skippa att ha youtuberamen ovanför filmen. Lägg filmen överst och ha en border på den istället (ser helt okej ut det med). */
+	background:url('bilder/transparent_ruta.png'); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bilder/transparent_ruta.png', sizingMethod='scale'); background:none !important;
+}
+
+.youtubecontainer iframe {
+	position: absolute;
+	top: 4.5%; left: 3.8%;		/* Passar in youtube-iframen i ramen. */
+	width: 92.5%;				/* Passar in youtube-iframen i ramen. */
+	height: 74.5%;				/* Passar in youtube-iframen i ramen. */
+	pointer-events: all;		/* Ska förmodligen inte behövas (det ska räcka med pointer-events:none på överliggande bild), men jag har den som extra säkerhet. */
+}
+
+.fotocontainer {
+	position: relative;
+	width: 100%;							/* Gör diven responsiv. */
+	padding-top: 77%;						/* Känt knep för att få höjden till en viss procent av bredden */
+	margin-bottom: 5px;
+	border: 0px solid #00ff00;
+}
+
+/* UTSKRIFT */
+.tva_kolumner_vid_utskrift_variant_direkt_under_rubrik {
+	margin-top: -15px;
+	border: 0px solid #0f0;
+}
+
+.fotocontainer_variant {
+	position: relative;
+	width: 100%;
+	padding-top: 77%;
+	margin-top: 2em;
+	margin-bottom: 5px;
+	border: 0px solid #00ff00;
+}
+
+.fotocontainer_variant_direkt_under_rubrik {
+	position: relative;
+	width: 100%;
+	padding-top: 77%;
+	margin-top: 0;
+	margin-bottom: 5px;
+	border: 0px solid #00ff00;
+}
+
+/* UTSKRIFT.*/
+/* Måste ligga efter fotocontainer_variant_direkt_under_rubrik, eftersom den ändrar dennas margin-top */
+.float_left_vid_utskrift {
+	margin-top: -15px;
+}
+
+.fotoram {
+	z-index: 1;					/* Gör att bilden lägger sig över allt med lägre z-index (eller utan z-index). Måste kombineras med någon position. */
+    position: absolute; 		/* Positionerar bilden i relation till container. */
+	left: 1%; top: 2%;			/* Inte 0%, för att lämna utrymme för 2 graders rotation. */
+	width: 98%;					/* Gör bilden responsiv. Inte 100%, för att lämna utrymme för 2 graders rotation. */
+}
+
+.foto {
+	position: absolute; 		/* Positionerar bilden i relation till fotocontainer. */
+	left: 7%; top: 9%;
+	width: 85%;					/* Gör bilden responsiv. */
+}
+
+.bild_utan_ram {				/* T.ex. newspaper-tower, elmotorförklaring, stjärnkartan (svenska varianten) */
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 2px solid #555;
+	border-radius: 2px;
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.5);
+}
+
+.bild_med_ram {				/* T.ex. stjärnkartan (engelska varianten) */
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.bildtext_experiment {
+	margin-top: 0px;
+	margin-bottom: 30px;
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+
+.varningslapp_miljolapp_container {
+	position: relative;
+	margin-top: 60px;
+	border: 0px solid #000000;
+}
+
+.varningslapp_overst {
+	position: relative;
+	margin-left: auto;						/* Centrerar diven. */
+	margin-right: auto;						/* Centrerar diven. */
+	width: 93%;
+	padding-top: 1.935%;					/* Bildens höjd delat med bredd. Ger diven samma ratio som bilden. */
+	background-image: url('/bilder/varningslapp_overst.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;				/* Hur stor del av divens bredd och höjd som ska tas upp av bilden. */
+	border: 0px solid #0000ff;
+}
+
+.varningslapp_mitten {						/* I denna div ligger texten. */
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 93%;								/* Diven får sin height av texten. */
+	padding: 10px 5% 30px 5%;
+	background-image: url('/bilder/varningslapp_mitten.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: 0px solid #ffff00;
+}
+
+.varningslapp_nederst {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 93%;
+	padding-top: 1.419%;
+	background-image: url('/bilder/varningslapp_nederst.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: 0px solid #0000ff;
+}
+
+.miljolapp_overst {
+	position: relative;
+	margin-left: auto;						/* Centrerar diven. */
+	margin-right: auto;						/* Centrerar diven. */
+	width: 93%;
+	padding-top: 1.935%;					/* Bildens höjd delat med bredd. Ger diven samma ratio som bilden. */
+	background-image: url('/bilder/miljolapp_overst.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;				/* Hur stor del av divens bredd och höjd som ska tas upp av bilden. */
+	border: 0px solid #0000ff;
+}
+
+.miljolapp_mitten {						/* I denna div ligger texten. */
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 93%;								/* Diven får sin height av texten. */
+	padding: 10px 5% 30px 5%;
+	background-image: url('/bilder/miljolapp_mitten.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: 0px solid #ffff00;
+}
+
+.miljolapp_nederst {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 93%;
+	padding-top: 1.419%;
+	background-image: url('/bilder/miljolapp_nederst.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: 0px solid #0000ff;
+}
+
+.reklamlapp_overst {
+	position: relative;
+	margin-left: auto;						/* Centrerar diven. */
+	margin-right: auto;						/* Centrerar diven. */
+	width: 93%;
+	padding-top: 1.935%;					/* Bildens höjd delat med bredd. Ger diven samma ratio som bilden. */
+	background-image: url('/bilder/ljusbla_lapp_overst.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;				/* Hur stor del av divens bredd och höjd som ska tas upp av bilden. */
+	border: 0px solid #0000ff;
+}
+
+.reklamlapp_mitten {						/* I denna div ligger texten. */
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 93%;								/* Diven får sin height av texten. */
+	padding: 10px 5% 30px 5%;
+	background-image: url('/bilder/ljusbla_lapp_mitten.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: 0px solid #ffff00;
+}
+
+.reklamlapp_nederst {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 93%;
+	padding-top: 1.419%;
+	background-image: url('/bilder/ljusbla_lapp_nederst.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: 0px solid #0000ff;
+}
+
+.tejp_nv {
+	/* Alla tejpbitar ser ut att röra sig uppåt när man ändrar skärmbredd. Men det är för att varningslapp_overst och varningslapp_nederst ändrar höjd, eftersom de ska behålla sin ratio. */
+	position: absolute;
+	left: 1%;
+	top: -15px;
+	width: 10%;
+	padding-top: 10%;
+	background-image: url('/bilder/tejp1.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: 0px solid #0000ff;
+}
+
+.tejp_no {
+	position: absolute;
+	left: 89%;
+	top: -10px;
+	width: 10%;
+	padding-top: 10%;
+	background-image: url('/bilder/tejp2.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: 0px solid #0000ff;
+}
+
+.tejp_sv {
+	position: absolute;
+	left: 1%;
+	bottom: -10px;
+	width: 10%;
+	padding-top: 10%;
+	background-image: url('/bilder/tejp2.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: 0px solid #0000ff;
+}
+
+.tejp_so {
+	position: absolute;
+	left: 89%;
+	bottom: -13px;
+	width: 10%;
+	padding-top: 10%;
+	background-image: url('/bilder/tejp1.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border: 0px solid #0000ff;
+}
+
+.special {
+	color: #FE9A2E;
+	text-transform: none;
+}
+
+ul.varningslista, ul.miljolista { list-style-type: circle; margin-top: 0px; margin-left: 10px; padding-left: 10px; } 
+ul.varningslista_niva2 { list-style-type: disc; margin-left: 15px; padding-left: 15px; } 
+ul.det_har_behover_du { list-style-type: circle; margin-left: 10px; padding-left: 10px; } 
+ul.det_har_behover_du_niva2 { list-style-type: circle; margin-left: 15px; padding-left: 15px; } 
+ul.experimentera { list-style-type: circle; margin-top: 15px; margin-left: 10px; padding-left: 10px; } 
+ol.experimentera { list-style-type: decimal; margin-top: 15px; margin-left: 10px; padding-left: 10px; }
+ol.experimentera_niva2 { list-style-type: lower-alpha; margin-left: 15px; padding-left: 15px; } 
+ol.flasktradgarden { margin-left: 10px; padding-left: 10px; } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ SÖK ------------------------------ */
+
+.googlesok {
+	border: 0px solid #ff0;
+}
+
+/* Sökrutan */
+.gsc-search-box {
+	padding: 2px 4px 0px 6px !important;
+}
+
+/* Search input */
+.cse input.gsc-input,
+input.gsc-input {
+	font-family: 'Mali'!important;
+	border: 1px solid #D3BCA1;
+	padding: 3px 6px;
+	width: 50%;
+	font-size: 40px;
+}
+
+/* Use a different font family for search results */
+.gs-title, .gs-snippet {
+    font-family: 'Mali'!important;
+	color: #333!important;
+}
+
+/* Do no display the count of search results */    
+.gsc-result-info {
+    display: none!important;
+}
+
+/* Do no display the URL of web pages in search results */
+.gsc-url-top, .gsc-url-bottom {
+    display: none!important;
+}
+
+/* Hide the Google branding in search results */
+.gcsc-branding {
+    display: none; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ SCIENCE PROJECTS ------------------------------ */
+
+ul.science-projects-niva1 { list-style-type: none; margin-left: 0px; padding-left: 0px; margin-top: 15px; margin-bottom: 0px; font-weight: 600; } 
+ul.science-projects-niva2 { list-style-type: circle; margin-left: 15px; padding-left: 15px; margin-top: 0px; margin-bottom: 15px; font-weight: 400; } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ LÄRARHANDLEDNING ------------------------------ */
+
+#till_experimenten {
+	margin-top: -20px;
+	font-weight: 600;
+}
+
+.kapitelkolumn {
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+.tillbaka_till_borjan {
+	font-size: 0.8em;
+	font-weight: 600;
+	text-align: center;
+	border: 0px solid #000;
+}
+
+.bildtext_lararhandledning {
+	margin-top: 0px;
+	margin-bottom: 30px;
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+
+.dokumentation {
+	position: relative;
+	width: 95%;							/* Gör diven responsiv. */
+	margin-bottom: 5px;
+	border: 1px solid #777;
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.5);
+}
+
+ul.lararhandledning { list-style-type: circle; margin-left: 10px; padding-left: 10px; margin-top: 15px;} 
+ul.lararhandledning_niva2 { list-style-type: none; margin-left: 15px; padding-left: 15px; } 
+ol.lararhandledning { list-style-type: decimal; margin-left: 13px; padding-left: 13px; }
+ol.lararhandledning_niva2 { list-style-type: lower-alpha; margin-left: 15px; padding-left: 15px; } 
+ol.lararhandledning_abc { list-style-type: lower-alpha; margin-left: 16px; padding-left: 16px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ SENASTE ------------------------------ */
+
+.checkbox_visa_fler {
+	display: none;
+}
+
+.checkbox_visa_fler:checked ~ #gomda_senaste_wrapper {
+	display: block;
+}
+
+.label_visa_fler{
+     cursor: pointer;
+	 color: #3a67a9;
+	 font-size: 1.2em;
+}
+	
+#gomda_senaste_wrapper {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ SIDFOT ------------------------------ */
+
+h4.sidfot { text-align: center; }
+
+#sidfoten { border: 0px solid #000000; clear: both; padding-bottom: 35px; font-size: 0.8em; text-align: center;}
+#sidfoten_innerwrapper  { border: 0px solid #00ff00; max-width: 775px; margin: 0 auto; position: relative; }
+#sidfoten_vanster { border: 0px solid #00ff00; text-align: left; position: absolute; top: 0px; left: 20%;}
+#sidfoten_mitten { border: 0px solid #ff0000; text-align: left; display: table; margin: 0 auto; padding-left: 5%;}
+#sidfoten_hoger { border: 0px solid #00ffff; text-align: left; position: absolute; top: 0px; right: 16%; }
+#sidfoten_text_langst_ner { text-align: center; padding-left: 3.5%; padding-right: 3.5%; }
+#sidfoten_text_langst_ner_mobil { display: none; margin-left: 10px; text-align:center; padding-left: 3.5%; padding-right: 3.5%; }
+
+@media screen and (max-width: 519px) { 
+h4.sidfot { font-size: 1.15em; }
+#sidfoten { font-size: 1em; }
+#sidfoten_vanster { position: static; text-align: center;}
+#sidfoten_mitten { position: static; text-align: center; padding-left: 0%;}
+#sidfoten_hoger { position: static; text-align: center; }
+#sidfoten_text_langst_ner { display: none; }
+#sidfoten_text_langst_ner_mobil { display: block; font-size: 0.8em; }
+}
+
+@media screen and (min-width: 520px) and (max-width: 899px) {
+#sidfoten { font-size: 1em; }
+#sidfoten_vanster { left: 15%;}
+#sidfoten_hoger { right: 12%; }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+#sidfoten_vanster { left: 15%;}
+#sidfoten_hoger { right: 12%; }
+}
+
+
+.ai-guidance-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 2px solid #eee;
+}
+
+.camera-feed {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    margin: 1rem 0;
+}
+
+#webcam, #outputCanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.feedback-box {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.feedback-warning {
+    background-color: #ffeeba;
+    border: 2px solid #ffc107;
+}
+
+.feedback-success {
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+}
+
+.guidance-btn {
+    padding: 0.8rem 1.5rem;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+

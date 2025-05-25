@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Mali';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bX2SRONuN4SCj8wlVQIQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bX2SRONuN4SCj8plZQIQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bU2SRONuN4SCjECg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bX2SRONuN4SCj8_ldQIQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bX2SRONuN4SCj80lBQIQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bX2SRONuN4SCj8tlFQIQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bV2SRONuN4QOLlKlQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bV2SRONuN4QIbmKlQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0ba2SRONuN4eCo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bV2SRONuN4QN7nKlQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bV2SRONuN4QPLgKlQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v10/N0bV2SRONuN4QJbhKlQ.ttf) format('truetype');
+}

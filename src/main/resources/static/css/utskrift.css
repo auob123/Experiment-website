@@ -1,0 +1,354 @@
+/* BRA ATT VETA */
+/* page-break-inside: avoid funkar oftast väldigt dåligt.
+
+/* SKILLNADER MELLAN HUR WEBBLÄSARE SKRIVER UT */
+/* I Dissektionen av abborre splittade Chrome några sjok ifall de var väldigt långa. Edge gjorde det inte.
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ ALLMÄNT ------------------------------ */
+
+/* Både Edge och Chrome har en tendens att gruppera alla steg på sida 2, trots att två av dem skulle få plats på sida 1. Detta gör sida 1 lite tråkig, så så kan man lägga till en <div class="sidbrytning"></div> mellan steg 2 och 3, så hamnar steg 1-2 på sida 1. Jag har dock inte gjort detta, eftersom jag är osäker på om det ställer till det i någon annan browser. */
+.sidbrytning {
+	page-break-before: always;
+}
+
+.endast_vid_utskrift {
+  display: inline;
+}
+
+body {
+	background-color: #ffffff;
+	background-image: none;
+	border: 0px solid #0f0;
+}
+
+h2 {
+	margin-top: 35px;
+	margin-bottom: 5px;
+}
+
+.fotocontainer {
+	page-break-inside: avoid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ SIDHUVUD OCH SIDFOT ------------------------------ */
+
+/* Den vanliga sidtoppsbilden ligger som background-image i en div. Men vid utskrift ignorerar de flest browsers background-image. Därför ignoreras den vanliga sidtoppsbild-diven helt vid utskrift... */
+#sidtoppsbild {
+	display: none;
+}
+
+/* ...och istället aktiveras en separat img, vilken är den vanliga desktop-sidtoppsbilden. */
+#sidtoppsbild_utskrift {
+	display: inline-block;
+	width: 100%;
+}
+
+.menyknapp {
+	display: none;
+}
+
+/* Ta bort den vanliga sidfoten */
+#sidfoten {
+	display: none;
+}
+
+.sidtopp_utskrift {
+  position: fixed;
+  top: 0;
+}
+
+.sidfot_utskrift {
+  position: fixed;
+  bottom: 0;
+}
+
+/* Döljer sidtoppen för utskrift, eftersom jag inte använder den (men bra att ha kvar ifall). */
+.sidtopp_utskrift, .space_sidtopp_utskrift {
+	display: none; 
+}
+
+.fb-page_container_valkomsttext {
+	display: none; 
+}
+
+video.experimentkurs {
+	display: none; 
+}
+
+#experimentkurs_reklamlapp {
+	display: none; 
+}
+
+/* Denna div behövs för att skapa utrymmet där den riktiga sidfoten sedan ska vara. Utan den här så kommer sidans content att lägga sig över sidfoten. Denna måste vara (minst) lika stor som den riktiga sidfoten. */
+.space_sidfot_utskrift {
+	display: inline-block;
+	height: 50px;
+	width: 100%;
+	border: 0px solid #00f;
+}
+
+.sidfot_utskrift {
+	display: inline-block;
+	height: 50px;
+	width: 100%;
+	border: 0px solid #f00;
+}
+
+.sidfotstext_utskrift {
+	display: inline-block;
+	position: absolute;
+	bottom: 0;						/* Positionerar texten i botten av sidfot_utskrift */
+	width: 55%;
+	left: 50%;						/* Centrera */
+	transform: translateX(-50%);	/* Centrera */
+	text-align: center;
+	color: #333;
+	font-weight: 400;
+	font-size: 0.7em;
+}
+
+img.sidfot_utskrift_vanster {
+	display: inline-block;
+	position: absolute;
+	left: 3%;
+	bottom: 0;
+	height: 50px;
+}
+
+img.sidfot_utskrift_hoger {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ EXPERIMENT ------------------------------ */
+
+
+img.skrivare {
+	display: none;
+}
+
+.gilla-tabell, h2.film, .youtubecontainer {
+	display: none;
+}
+
+/* IE kan inte skriva ut bakgrundsbilder i divar, därför tar jag bort varningslappen (utöver texten) helt */
+.varningslapp_miljolapp_container {
+	position: relative;
+	margin-top: 35px;
+	border: 0px solid #000000;
+}
+
+.varningslapp_overst, .varningslapp_nederst, .miljolapp_overst, .miljolapp_nederst, .tejp_nv, .tejp_no, .tejp_sv, .tejp_so {
+	display: none;
+	border: 0px solid #0f0;
+}
+
+.varningslapp_mitten, .miljolapp_mitten {	/* I denna div ligger texten. */
+	width: 100%;
+	padding: 0;
+	background-image: none;					/* För säkerhets skull */
+	border: 0px solid #ffff00;
+}
+
+h2.varningsrubrik, h2.miljorubrik {
+	text-align: left;
+}
+
+.tva_kolumner_vid_utskrift {
+	margin-top: 35px;
+	border: 0px solid #0f0;
+}
+
+.tva_kolumner_vid_planeter {
+	margin-top: 35px;
+	border: 0px solid #0f0;
+}
+
+.tva_riktiga_kolumner_vid_utskrift { /* Alltså inte rader, utan KOLUMNER (används i Dissektionen av abborre) */
+	column-count: 2;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	margin-top: 35px;
+}
+
+.tva_kolumner_vid_utskrift_variant {
+	margin-top: 2em;
+	border: 0px solid #0f0;
+}
+
+.tva_kolumner_vid_utskrift_variant_direkt_under_rubrik {
+	margin-top: 0px;
+	border: 0px solid #0f0;
+}
+
+/* Används för att hålla ihop stegrubrik, foto och fototext (eller något annat om man vill). Inline-block är ett knep för att få denna div att sitta ihop vid utskrift, både vid sidbryt och kolumnbryt. "page-break-inside: avoid" på en div med annan display funkar inge bra. */
+.sjok_vid_utskrift {
+	display: inline-block;
+	width: 43%;						/* Gör att det oftast får plats 6 foton per sida */
+	margin-top: 0px;
+	margin-right: 25px;
+	margin-bottom: 25px;			/* Gör att det oftast får plats 6 foton per sida */
+	vertical-align: top;
+	border: 0px solid #f00;
+}
+
+.sjok_vid_utskrift_vid_riktiga_kolumner {
+	page-break-inside: avoid;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.sjok_vid_utskrift_planeter {
+	display: inline-block;
+	width: 43%;
+	margin-top: 0px;
+	margin-right: 25px;
+	margin-bottom: 10px;
+	vertical-align: top;
+	border: 0px solid #f00;
+}
+
+.sjok_vid_utskrift_variant {
+	display: inline-block;
+	width: 43%;
+	margin-top: 0px;
+	margin-right: 25px;
+	margin-bottom: 0;
+	vertical-align: top;
+	border: 0px solid #f00;
+}
+
+.sjok_vid_utskrift_variant_vid_float_left {
+	page-break-inside: avoid;
+}
+
+.fotocontainer_variant, .fotocontainer_variant_direkt_under_rubrik {
+	margin-top: 0px;
+	border: 0px solid #ff0;
+}
+
+.float_left_vid_utskrift {
+	float: left;
+	width: 43%;
+	padding-top: 33.11%;			/* Måste förminskas lika mycket som width. Width 100% motsvarar padding-top 77%. */
+}
+
+h2.steg1 {
+	margin-top: 0px;
+}
+
+h2.steg {
+	margin-top: 0px;
+}
+
+h2.steg_vid_riktiga_kolumner {
+	margin-top: 25px;
+}
+
+h2.kort_forklaring, h2.forklaring {
+	page-break-before: always;
+	margin-top: 0px;
+}
+
+.liknande_segment {
+	display: none;
+}
+
+.mellanrum_mellan_liknande_och_senaste {
+	display: none;
+}
+
+.mellanrum_mellan_senaste_och_sidfoten {
+	display: none;
+}
+
+.mastercontainer {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------ LÄRARHANDLEDNING ------------------------------ */
+
+h1.teachers-guide {
+	font-size: 55px;
+}
+
+#till_experimenten {
+	display: none;
+}
+
+h2.teachers-guide {
+	font-size: 35px;
+}
+
+table.teachers-guide {
+	font-size: 30px;
+}
+
+.tillbaka_till_borjan {
+	display: none;
+}

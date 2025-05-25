@@ -44,6 +44,8 @@
 
     <!-- Existing application logging configuration -->
     <logger name="com.labassistant" level="DEBUG"/>
+    <logger name="org.springframework.security" level="TRACE"/>
+    <logger name="org.springframework.web.filter" level="TRACE"/>
     <logger name="org.springframework" level="WARN"/>
     <logger name="org.hibernate" level="ERROR"/>
     <logger name="org.apache" level="WARN"/>
