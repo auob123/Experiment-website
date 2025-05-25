@@ -1,0 +1,639 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+<!-- Google-fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+
+<!-- Hindrar att sidan skalas om i iPhone -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+
+<link th:href="@{/css/stilmall.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/css/utskrift.css}" rel="stylesheet" type="text/css" media="print">
+
+<!-- Favicon-kod -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=kPvPaOpNPB">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=kPvPaOpNPB">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=kPvPaOpNPB">
+<link rel="manifest" href="/site.webmanifest?v=kPvPaOpNPB">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=kPvPaOpNPB" color="#df4b1f">
+<link rel="shortcut icon" href="/favicon.ico?v=kPvPaOpNPB">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Google AdSense -->
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-D1LS557S6T&amp;l=dataLayer&amp;cx=c&amp;gtm=457e53d0za200&amp;tag_exp=102308675~102482433~102587591~102717422~102788824~102813109~102814060~102825837~102879719"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202503110101/show_ads_impl.js"></script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2842037862813712" crossorigin="anonymous" data-checked-head="true"></script>
+
+
+
+<title>Яркий электрический мотор</title>
+<meta name="description" content="Соберите простой гомополярный мотор с лампочками. Этот эксперимент показывает, как связь между электричеством и магнетизмом может создавать силы и движение.">
+<meta name="keywords" content="физика, эксперимент, наука, проект, демонстрация, дети, дом, школа, яркий, электрический, мотор, гомополярный, мотор, лампочки, батарейка, винт, неодимовый, магнит, вращение, крутить, светодиод">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9wSqI5i0iwGdf6L1CERNdmsTPgVu44ewj8QxTBYgsv1LCPUVF7YmWOvTappqB1139jAymxUW/RO8zmMqo4zlAAAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A+d7vJfYtay4OUbdtRPZA3y7bKQLsxaMEPmxgfhBGqKXNrdkCQeJlUwqa6EBbSfjwFtJWTrWIioXeMW+y8bWAgQAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script async="" src="https://fundingchoicesmessages.google.com/i/ca-pub-2842037862813712?href=https%3A%2F%2Fwww.experimentarchive.com%2Fexperiments%2Fflashy-electric-motor&amp;ers=2"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxVEa_sbuI8jEecqSybVOM1jhF8cY0nv0IeZiF8QZWTnePW8XGMn78XhuzVbH1oiKSp31_Lkfqd9KwBLf_AiWjrMZWkmae99d21cBFoyTTlQQsTo7uojtcwW-teYeqr3bj7oSvD0_A==?fccs=W1siQUtzUm9sOERxQVVPa05ROGxOcjlodW4wNmF5UHlHbFlySUZuTk5FWWlsMXNmWVozTzFvRWY2V1pnWXdoSDFGZVM4WHE2NUVObWh1cUd4djNRMm01M3RHaV9aMF9BZHNINDc2bzUwUWRRNkpqMGZvNldZS00xVEZEWEtNMUhtZm04OVFFNTI4Z1QxT0FaTWRMMXI2am85MHNjM0pZS2R2dkNBPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3NDIxNjI3MDEsNDgyMDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbN11dLCJodHRwczovL3d3dy5leHBlcmltZW50YXJjaGl2ZS5jb20vZXhwZXJpbWVudHMvZmxhc2h5LWVsZWN0cmljLW1vdG9yLyIsbnVsbCxbWzgsIjljUXduZGZGa2NZIl0sWzksImVuLVVTIl0sWzIwLCJbbnVsbCxudWxsLFszMTA4ODI0OF0sbnVsbCwxMF0iXSxbMjYsIjEwIl0sWzE5LCIyIl0sWzE3LCJbMF0iXSxbMjQsIiJdLFsyNSwiW1szMTA4ODI0OF1dIl0sWzI5LCJmYWxzZSJdXV0"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxVN5_wbGWamHLEzhxew9QU5JRt9i9g3WW_qkfpUwDNnLe8C0QPjqx-0nmZP4RSCj96gZnvtZVkMdhPf-0UgDQPrhcqVpYnLk2XcoEew9J7_gR6LCv1MDr6x-48lL73fzvp85ju9zg==?fccs=W1siQUtzUm9zOERxQVVPa05ROGxOcjlodW4wNmF5UHlHbFlySUZuTk5FWWlsMXNmWVozTzFvRWY2V1pnWXdoSDFGZVM4WHE2NUVObWh1cUd4djNRMm01M3RHaV9aMF9BZHNINDc2bzUwUWRRNkpqMGZvNldZS00xVEZEWEtNMUhtZm04OVFFNTI4Z1QxT0FaTWRMMXI2am85MHNjM0pZS2R2dkNBPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3NDIxNjI3MDEsNTYxMDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbNyw5XSxudWxsLDIsbnVsbCwiZW4iXSwiaHR0cHM6Ly93d3cuZXhwZXJpbWVudGFyY2hpdmUuY29tL2V4cGVyaW1lbnRzL2ZsYXNoeS1lbGVjdHJpYy1tb3Rvci8iLG51bGwsW1s4LCI5Y1F3bmRmRmtjWSJdLFs5LCJlbi1VUyJdLFsyMCwiW251bGwsbnVsbCxbMzEwODgyNDhdLG51bGwsMTBdIl0sWzI2LCIxMCJdLFsxOSwiMiJdLFsxNywiWzBdIl0sWzI0LCIiXSxbMjUsIltbMzEwODgyNDhdXSJdLFsyOSwiZmFsc2UiXV1d"></script><meta http-equiv="origin-trial" content="AxjhRadLCARYRJawRjMjq4U8V8okQvSnrBIJWdMajuEkN3/DfVAcLcFhMVrUWnOXagwlI8dQD84FwJDGj9ohqAYAAABveyJvcmlnaW4iOiJodHRwczovL2dvb2dsZWFkc2VydmljZXMuY29tOjQ0MyIsImZlYXR1cmUiOiJGZXRjaExhdGVyQVBJIiwiZXhwaXJ5IjoxNzI1NDA3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxUvuwJPjenLQkuR6H6pn1WeAVxZ66GgSBJosWclCGD-YqjMtIzPvP7wYgOhBivZwaPozBT4NwU5OE5lMZasDbdfcpr004NvxVIAcaDTnQ7XxvBg9sdbuVQzix0iFzolLkDeEAyckA==?fccs=W1siQUtzUm9zOERxQVVPa05ROGxOcjlodW4wNmF5UHlHbFlySUZuTk5FWWlsMXNmWVozTzFvRWY2V1pnWXdoSDFGZVM4WHE2NUVObWh1cUd4djNRMm01M3RHaV9aMF9BZHNINDc2bzUwUWRRNkpqMGZvNldZS00xVEZEWEtNMUhtZm04OVFFNTI4Z1QxT0FaTWRMMXI2am85MHNjM0pZS2R2dkNBPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3NDIxNjI3MDIsMzI1MDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbNyw5LDZdLG51bGwsMixudWxsLCJlbiIsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLDFdLCJodHRwczovL3d3dy5leHBlcmltZW50YXJjaGl2ZS5jb20vZXhwZXJpbWVudHMvZmxhc2h5LWVsZWN0cmljLW1vdG9yLyIsbnVsbCxbWzgsIjljUXduZGZGa2NZIl0sWzksImVuLVVTIl0sWzIwLCJbbnVsbCxudWxsLFszMTA4ODI0OF0sbnVsbCwxMF0iXSxbMjYsIjEwIl0sWzE5LCIyIl0sWzE3LCJbMF0iXSxbMjQsIiJdLFsyNSwiW1szMTA4ODI0OF1dIl0sWzI5LCJmYWxzZSJdXV0"></script></head>
+<body>
+
+<!-- Övre kodhalva för sidhuvud och sidfot vid utskrift -->
+<div class="sidtopp_utskrift"></div>
+<table id="utskriftstabell">
+<thead><tr><td>
+<div class="space_sidtopp_utskrift">&nbsp;</div>
+</td></tr></thead>
+<tbody><tr><td>
+<div class="content">
+
+
+
+
+
+
+<!-- G�r att inga CSS-animationer startar n�r sidan laddas -->
+<script>
+	$(window).load(function() {
+  $("body").removeClass("preload");
+});
+</script>
+
+
+
+
+
+
+<div id="sidtoppswrapper">
+
+<!-- Sidtoppsbild f�r utskrift -->
+<img id="sidtoppsbild_utskrift" src="/bilder/sidtopp_desktop_1920.png">
+
+<!-- Sidtoppsbild f�r screen -->
+<a th:href="@{}"><div id="sidtoppsbild"></div></a>
+
+
+
+
+
+<input class="osynlig-checkbox" type="checkbox" id="checkboxen">
+<label class="menyknapp" for="checkboxen"><span class="mittenstreck"></span></label>
+
+
+
+<div id="dropdown">
+
+<center>
+<img th:src="@{bilder/bokstapel.png}" id="bokstapel" usemap="#image-map"><br>
+
+
+
+<map name="image-map">
+	<area target="" alt="" title="" href="/" coords="89,60,82,71,81,82,87,94,208,108,252,76,247,65,253,48,220,41,215,60,202,66,179,63,171,49,172,37,137,30" shape="poly">
+    <area target="" alt="" title="" href="/biology/" coords="91,95,86,96,79,109,84,127,219,136,251,99,244,97,244,83,208,109" shape="poly">
+    <area target="" alt="" title="" href="/chemistry/" coords="100,131,92,138,92,150,95,163,225,171,258,136,252,127,258,111,248,105,220,136" shape="poly">
+    <area target="" alt="" title="" href="/physics/" coords="91,149,77,161,70,161,62,167,60,184,68,195,198,210,245,174,241,156,228,172,98,164" shape="poly">
+    <area target="" alt="" title="" href="/earth-science/" coords="80,198,73,201,66,209,66,219,73,232,203,239,238,200,232,196,232,186,196,211" shape="poly">
+    <area target="" alt="" title="" href="/astronomy/" coords="91,233,86,239,85,249,88,256,219,272,263,244,257,235,259,224,267,218,233,209,207,240" shape="poly">
+    <area target="" alt="" title="" href="/technology/" coords="86,256,79,264,76,275,81,289,207,303,258,270,253,265,253,252,220,275" shape="poly">
+    <area target="" alt="" title="" href="/fire/" coords="128,316,83,350,76,354,73,376,230,396,272,360,266,354,270,338,208,331,186,343,167,345,142,338,133,328" shape="poly">
+    <area target="" alt="" title="" href="/air/" coords="83,378,76,388,81,399,234,416,273,379,273,363,232,396" shape="poly">
+    <area target="" alt="" title="" href="/water/" coords="81,399,77,405,73,411,77,423,234,436,272,403,271,384,233,417" shape="poly">
+	
+    <area target="" alt="" title="" href="/science-projects/" coords="129,440,122,440,83,479,77,482,71,489,69,513,75,524,257,541,296,498,289,492,287,481,290,469,295,465,299,459,217,450,215,469,161,481,129,469" shape="poly">
+ 
+
+
+    <area target="" alt="" title="" href="/teachers-guide/" coords="73,522,65,528,61,546,63,558,67,566,249,583,293,540,287,534,285,524,293,505,253,540,193,534,108,528" shape="poly">
+    <area target="" alt="" title="" href="/search/" coords="127,591,93,621,86,627,84,637,88,644,195,651,233,620,229,613,229,600,235,592,216,589,211,603,210,614,193,623,174,628,153,619,141,619,128,623,120,621,118,613,122,609,129,608,129,599" shape="poly">
+    <area target="_blank" alt="" title="" href="https://www.youtube.com/channel/UC2JUYBeXkSmLeaQMWIaCWlQ" coords="87,644,85,653,88,663,196,669,232,641,228,636,230,623,195,651" shape="poly">
+    <area target="" alt="" title="" href="/about/" coords="88,663,84,668,85,679,90,683,197,686,233,656,229,650,230,642,196,669" shape="poly">
+	
+</map>
+
+
+
+</center>
+
+<!-- Slut dropdown -->
+</div>
+
+
+
+
+
+
+
+
+<!-- Slut sidtoppswrapper -->
+</div>
+
+<div class="valkommentext">
+Весёлые и простые научные эксперименты для детей и взрослых. 
+</div>
+
+<!--
+<div class="fb-page_container_valkomsttext">
+<div class="fb-page" data-href="https://www.facebook.com/experimentarkivet" data-tabs="" data-width="280" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/experimentarkivet" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/experimentarkivet" class="fb-page-lank">The Experiment Archive</a></blockquote></div>
+</div>
+-->
+
+
+
+
+
+
+<div id="ytterwrapper">
+<div id="innerwrapper">
+
+
+
+
+
+
+<div class="experimentrubrik_och_skrivare_wrapper">
+<div class="experimentrubrik_wrapper">
+<h1 class="experimentrubrik">Яркий электрический мотор</h1>
+
+
+<a href="javascript:window.print()" title="Print"><img class="skrivare" src="/bilder/skrivare.png"></a>
+</div></div>
+
+
+<a th:href="@{physics/index.html}"><div class="kategori">Физика</div></a>
+
+
+
+
+<div class="ingress">
+Соберите простой гомополярный мотор с лампочками. Этот эксперимент показывает, как связь между электричеством и магнетизмом может создавать силы и движение.
+</div>
+
+
+
+
+
+
+
+
+<table class="gilla-tabell">
+<tbody><tr class="gilla-tabell_ovre_rad">
+<td>Нравится:</td>
+<td class="gilla-tabell_tom_kolumn"></td>
+<td>Поделиться:</td>
+</tr>
+<tr>
+<td><div class="fb-like" data-href="https://experimentarchive.com/experiments/flashy-electric-motor/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div></td><td></td>
+<td><div class="addthis_inline_share_toolbox"></div></td>
+</tr>
+</tbody></table>
+
+
+
+<h2 class="film">Видео</h2>
+
+<div class="youtubecontainer">
+<img class="youtuberam" src="/bilder/tv.png">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Atzqu54wS1Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+
+
+<h2 class="det_har_behover_du">Материалы</h2>
+<ul class="det_har_behover_du">
+<li class="det_har_behover_du">1-2 неодимовых магнита</li>
+<li class="det_har_behover_du">1 электрический провод</li>
+<li class="det_har_behover_du">1 пара кусачек</li>
+<li class="det_har_behover_du">Батарейка 1,5 В</li>
+<li class="det_har_behover_du">Изолента</li>
+<li class="det_har_behover_du">1 винт</li>
+</ul>
+
+Яркий электрический мотор (дополнительно):
+<ul class="det_har_behover_du">
+<li class="det_har_behover_du">Часовая батарейка 3 В</li>
+<li class="det_har_behover_du">2 светодиода</li>
+</ul>
+
+
+
+
+<div class="varningslapp_miljolapp_container">
+<div class="varningslapp_overst"></div>
+<div class="varningslapp_mitten">
+<h2 class="varningsrubrik">Внимание!</h2>
+Разъединяйте провод и батарейку, когда не используете. Провод может нагреться и вызвать пожар.
+</div>
+<div class="varningslapp_nederst"></div>
+<div class="tejp_nv"></div>
+<div class="tejp_no"></div>
+<div class="tejp_sv"></div>
+<div class="tejp_so"></div>
+</div>
+
+
+
+
+
+
+
+<div class="tva_kolumner_vid_utskrift">
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg1">Шаг 1</h2>
+
+
+
+<div class="fotocontainer">
+<img class="fotoram rot1" src="/bilder/fotoram.png">
+<img class="foto rot1" src="1.jpg">
+</div>
+
+Снимите 5-10&nbsp;мм (1/4-1/2&nbsp;дюйма) изоляции с обоих концов провода.
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 2</h2>
+
+
+
+<div class="fotocontainer">
+<img class="fotoram rot-1" src="/bilder/fotoram.png">
+<img class="foto rot-1" src="2.jpg">
+</div>
+
+Положите головку винта в центр неодимового магнита. Подвесьте винт с магнитом под батарейкой, направив острый конец винта к положительному контакту батарейки.
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 3</h2>
+
+
+<div class="fotocontainer">
+<img class="fotoram" src="/bilder/fotoram.png">
+<img class="foto" src="3.jpg">
+</div>
+
+Приложите один конец провода к отрицательному контакту батарейки. Прикрепите изолентой, если хотите.
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 4</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot2" src="/bilder/fotoram.png">
+<img class="foto rot2" src="4.jpg">
+</div>
+
+Коснитесь свободным концом провода магнита. Смотрите, как винт вращается!
+
+
+
+
+
+
+<h2>Яркий электрический мотор (шаги 5-8):</h2>
+Источник: <a href="https://www.youtube.com/watch?v=M8hm29KuyXk" target="_blank">"World's Simplest Motor Version 02 - Sick Science! #033"</a>. Steve Spangler Science.
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 5</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot-1" src="/bilder/fotoram.png">
+<img class="foto rot-1" src="5.jpg">
+</div>
+
+Поставьте светодиоды на часовую батарейку, как показано. Один вывод с каждой стороны, длинный вывод — на положительную сторону батарейки. Светодиоды должны загореться.
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 6</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot1" src="/bilder/fotoram.png">
+<img class="foto rot1" src="6.jpg">
+</div>
+
+Закрепите светодиоды, приклеив кусочек изоленты на положительную сторону батарейки (там, где длинные выводы светодиодов).
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 7</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot1" src="/bilder/fotoram.png">
+<img class="foto rot1" src="7.jpg">
+</div>
+
+Прикрепите отрицательную сторону батарейки (без изоленты) к магниту.
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 8</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot-1" src="/bilder/fotoram.png">
+<img class="foto rot-1" src="8.jpg">
+</div>
+
+
+Снова коснитесь проводом магнита и смотрите, как винт вращается — теперь всё ещё ярче.
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div> <!-- Slut två kolumner vid utskrift -->
+
+
+
+
+
+
+
+
+
+<h2 class="kort_forklaring">Краткое объяснение</h2>
+Между электрическими и магнитными явлениями существует тесная связь. Здесь электрический ток в медном проводе проходит через магнитное поле вокруг магнитов. Это вызывает появление силы, которая толкает магнит и заставляет его двигаться.
+
+
+
+
+
+
+
+<h2 class="lang_forklaring">Подробное объяснение</h2>
+Вы только что собрали устройство, которое может заставить что-то двигаться с помощью электрического тока — электрический мотор. Электрический мотор работает благодаря взаимодействию между электрическим током и магнитным полем.
+<br><br>
+Вокруг магнита существует магнитное поле. Это поле окружает магнит как сфера, но также считается, что оно имеет направление (<em>B</em> на рисунке). Это направление — то, куда указывает северный конец стрелки компаса. Вокруг магнита это направление: от северного полюса магнита (верхний конец в данном случае), по большой дуге вне магнита, и к южному полюсу магнита (нижний).
+
+<img class="bild_utan_ram" src="forklaring-1.jpg">
+
+<img class="bild_utan_ram" src="forklaring-2.jpg">
+
+
+Если электрический ток проходит в этом магнитном поле, могут происходить разные явления. В этой демонстрации электрический ток (<em>I</em> на рисунке) идёт от положительного контакта (снизу) батарейки к отрицательному (сверху). Ток проходит в основном по медному проводу, но также по винту и магниту. То, что магнит тоже часть цепи, не обязательно — достаточно, чтобы магнит был рядом — но здесь это удобно.
+<br><br>
+Там, где ток идёт в том же или строго противоположном направлении, что и магнитное поле, ничего не происходит. Но если это не так, возникает сила (сила Лоренца) на материале, проводящем ток. Эта сила максимальна там, где ток идёт перпендикулярно магнитному полю. В этом моторе это происходит примерно в середине медного провода, а также внутри магнита (см. рисунок). Поскольку магнитное поле сильнее всего внутри магнита, сила там тоже максимальна.
+<br><br>
+Сила (<em>F</em> на рисунке), действующая на медный провод, направлена перпендикулярно направлению тока и магнитного поля в этой точке. В результате магнит начинает вращаться.
+<br><br>
+Такой тип мотора называется <em>гомополярным мотором</em>, потому что направление тока всегда одинаковое. Такой мотор был впервые сконструирован англичанином Майклом Фарадеем в 1821 году.
+
+
+  
+
+  
+  
+<h2>Эксперимент</h2>
+Вы можете превратить эту демонстрацию в эксперимент. Так она станет отличным <a th:href="@{science-projects/}">научным проектом</a>. Для этого попробуйте ответить на один из следующих вопросов. Ответ на вопрос будет вашей гипотезой. Затем проверьте гипотезу, выполнив эксперимент.
+<ul class="experimentera">
+<li class="experimentera">Что произойдёт, если использовать другой тип магнита?</li>
+<li class="experimentera">Что произойдёт, если использовать несколько магнитов друг на друге?</li>
+<li class="experimentera">Что произойдёт, если использовать другую батарейку вместо 1,5 В?</li>
+</ul>
+
+
+
+
+
+
+
+
+<table class="gilla-tabell">
+<tbody><tr class="gilla-tabell_ovre_rad">
+<td>Нравится:</td>
+<td class="gilla-tabell_tom_kolumn"></td>
+<td>Поделиться:</td>
+</tr>
+<tr>
+<td><div class="fb-like" data-href="https://experimentarchive.com/experiments/flashy-electric-motor/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div></td>
+<td></td>
+<td><div class="addthis_inline_share_toolbox"></div></td>
+</tr>
+</tbody></table>
+
+
+
+
+</div> <!-- Slut innerwrapper -->
+</div> <!-- Slut ytterwrapper -->
+
+
+<div class="liknande_segment">
+
+<div class="mellanrum_mellan_senaste_och_sidfoten"></div>
+
+
+
+
+
+<div id="sidfoten">
+
+<h4 class="sidfot">Содержание сайта</h4>
+
+<div id="sidfoten_innerwrapper">
+
+<div id="sidfoten_vanster">
+<a th:href="@{}" class="sidfot">Главная</a><br>
+<a th:href="@{biology/}" class="sidfot">Биология</a><br>
+<a th:href="@{chemistry/}" class="sidfot">Химия</a><br>
+<a th:href="@{physics/index.html}" class="sidfot">Физика</a><br>
+<a th:href="@{earth-science/}" class="sidfot">Науки о Земле</a><br>
+<a th:href="@{astronomy/}" class="sidfot">Астрономия</a><br>
+<a th:href="@{technology/}" class="sidfot">Технологии</a><br>
+<br>
+
+</div>
+
+<div id="sidfoten_mitten">
+<a th:href="@{fire/}" class="sidfot">Тема: Огонь</a><br>
+<a th:href="@{air/}" class="sidfot">Тема: Воздух</a><br>
+<a th:href="@{water/}" class="sidfot">Тема: Вода</a><br>
+<br>
+<a th:href="@{science-projects/}" class="sidfot">Научные проекты</a><br>
+<a th:href="@{teachers-guide/}" class="sidfot">Пособие для учителя</a><br>
+<br>
+</div>
+
+<div id="sidfoten_hoger">
+<a th:href="@{search/}" class="sidfot">Поиск</a><br>
+<a href="https://www.youtube.com/channel/UC2JUYBeXkSmLeaQMWIaCWlQ" target="_blank" class="sidfot">YouTube</a><br>
+<a th:href="@{about/}" class="sidfot">О сайте</a><br>
+</div>
+
+
+
+
+
+
+
+<div id="sidfoten_text_langst_ner">
+<br><br>
+©&nbsp;Архив Экспериментов. Весёлые и простые научные эксперименты для детей и взрослых. Биология, химия, физика, науки о Земле, астрономия, технологии, огонь, воздух и вода. Для детского сада, школы, дома и научных проектов. Также научные проекты и пособие для учителя.
+<br><br>
+<a href="#">Наверх</a>
+</div>
+
+<div id="sidfoten_text_langst_ner_mobil">
+<br><br>
+©&nbsp;Архив Экспериментов. Весёлые и простые научные эксперименты для детей и взрослых. Биология, химия, физика, науки о Земле, астрономия, технологии, огонь, воздух и вода. Для детского сада, школы, дома и научных проектов. Также научные проекты и пособие для учителя.
+<br><br>
+<a href="#">Наверх</a>
+</div>
+
+
+
+
+
+
+
+<!-- Slut sidfoten_innerwrapper-div -->
+</div>
+<!-- Slut sidfoten-div -->
+</div>
+
+
+
+
+
+
+<!-- AddThis-script -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d48264b498e12e4"></script> -->
+
+
+<!-- Google Analytics-script -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-146837875-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146837875-3');
+</script>
+
+
+<!-- Undre kodhalva för sidhuvud och sidfot vid utskrift -->
+</div>
+</td></tr></tbody>
+<tfoot><tr><td>
+<div class="space_sidfot_utskrift">&nbsp;</div>
+</td></tr></tfoot>
+</table>
+<div class="sidfot_utskrift">
+<img th:src="@{bilder/sidfot_utskrift_vanster.jpg}" class="sidfot_utskrift_vanster">
+<img th:src="@{bilder/sidfot_utskrift_hoger.jpg}" class="sidfot_utskrift_hoger">
+
+
+<div class="sidfotstext_utskrift">Архив Экспериментов Людвига Велландера. Весёлые и простые научные эксперименты для школы и дома. Биология, химия, физика, науки о Земле, астрономия, технологии, огонь, воздух и вода. Фото и видео.
+</div></div>
+
+
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2842037862813712&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;abgtt=6&amp;lmt=1742162700&amp;plaf=1%3A2%2C2%3A2%2C7%3A2&amp;plat=1%3A128%2C2%3A128%2C3%3A128%2C4%3A128%2C8%3A128%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1048576%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fwww.experimentarchive.com%2Fexperiments%2Fflashy-electric-motor%2F&amp;pra=5&amp;wgl=1&amp;aihb=0&amp;asro=0&amp;ailel=1~2~4~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&amp;aiael=1~2~3~4~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&amp;aicel=33~38&amp;aifxl=29_18~30_19&amp;aiixl=29_5~30_6&amp;aiapm=0.15&amp;aiapmi=0.33938&amp;aiact=0.3&amp;ailct=0.5&amp;uach=WyJMaW51eCIsIjYuMS44NSIsIng4NiIsIiIsIjEzNC4wLjY5OTguODgiLG51bGwsMCxudWxsLCI2NCIsW1siTm90OkEtQnJhbmQiLCIyNC4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxMzQuMC42OTk4Ljg4Il1dLDBd&amp;dt=1742162700878&amp;bpp=9&amp;bdt=544&amp;idt=44&amp;shv=r20250312&amp;mjsv=m202503110101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie_enabled=1&amp;eoidce=1&amp;nras=1&amp;correlator=121303142876&amp;frm=20&amp;pv=2&amp;u_tz=0&amp;u_his=6&amp;u_h=600&amp;u_w=800&amp;u_ah=600&amp;u_aw=800&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=765&amp;bih=388&amp;scr_x=0&amp;scr_y=0&amp;eid=31091052%2C95354315%2C95354337%2C95354597%2C31088250&amp;oid=2&amp;pvsid=3404992050076928&amp;tmod=107479783&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;fc=1920&amp;brdim=10%2C10%2C10%2C10%2C800%2C0%2C780%2C580%2C780%2C388&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1&amp;td=1&amp;tdf=2&amp;psd=W251bGwsW251bGwsbnVsbCxudWxsLCJkZXByZWNhdGVkX2thbm9uIl0sbnVsbCwxXQ..&amp;nt=1&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=115" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true"></iframe></div></ins><iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__tcfapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20250312/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>

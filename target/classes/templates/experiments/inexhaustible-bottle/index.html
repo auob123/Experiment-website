@@ -1,0 +1,628 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<!-- Google-fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+
+<!-- Hindrar att sidan skalas om i iPhone -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+
+<link th:href="@{/css/stilmall.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/css/utskrift.css}" rel="stylesheet" type="text/css" media="print">
+
+<!-- Favicon-kod -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=kPvPaOpNPB">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=kPvPaOpNPB">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=kPvPaOpNPB">
+<link rel="manifest" href="/site.webmanifest?v=kPvPaOpNPB">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=kPvPaOpNPB" color="#df4b1f">
+<link rel="shortcut icon" href="/favicon.ico?v=kPvPaOpNPB">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Google AdSense -->
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-D1LS557S6T&amp;l=dataLayer&amp;cx=c&amp;gtm=457e53d0za200&amp;tag_exp=102308675~102482433~102587591~102717422~102788824~102813109~102814060~102825837~102879719"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202503110101/show_ads_impl.js"></script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2842037862813712" crossorigin="anonymous" data-checked-head="true"></script>
+
+<title>Неиссякаемая бутылка</title>
+<meta name="description" content="Бутылка, из которой никогда не заканчивается вода. Эксперимент о воздушном давлении и гравитации.">
+<meta name="keywords" content="физика, эксперимент, наука, проект, демонстрация, дети, дом, школа, неиссякаемая, бутылка, магия, трюк, вода, воздух, давление, никогда, не заканчивается, гравитация, труба, пластик">
+
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9wSqI5i0iwGdf6L1CERNdmsTPgVu44ewj8QxTBYgsv1LCPUVF7YmWOvTappqB1139jAymxUW/RO8zmMqo4zlAAAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A+d7vJfYtay4OUbdtRPZA3y7bKQLsxaMEPmxgfhBGqKXNrdkCQeJlUwqa6EBbSfjwFtJWTrWIioXeMW+y8bWAgQAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script async="" src="https://fundingchoicesmessages.google.com/i/ca-pub-2842037862813712?href=https%3A%2F%2Fwww.experimentarchive.com%2Fexperiments%2Finexhaustible-bottle&amp;ers=2"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxVt5ElvGS7yT4IU0-Ln_kyw13qcK8zB6jjeMswqiVJbZj64UbN1dt-24hHFbJCIZ3VNJUTHMuy68R1WV3me9HFRpkLtC1-2BC8_Td3wA_GeFIMTXWJdv__M20zix7VM9yHWZv6YAg==?fccs=W1siQUtzUm9sXzJvTU51cm05dzZidHhOX0IxYWE3Q21TNjJ3VFpmQWxmazdKWUFXZ0pwZ2dQQkFrSWt6OHZiUmdSdERsSzZvWFdiVlZKSzViOGFTYUxBTnIyeXo3TnZMdExKbDRCRDVHS0g5X29vQUloUVp2ZWNCcHJXT3I1RElad3VHMm5IN2YzSTN3aWt5OEdJTXMzV1pVN0lhZ3NUVktkbGlnPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3NDIxNjMyMjksMjUyMDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbN11dLCJodHRwczovL3d3dy5leHBlcmltZW50YXJjaGl2ZS5jb20vZXhwZXJpbWVudHMvaW5leGhhdXN0aWJsZS1ib3R0bGUvIixudWxsLFtbOCwiOWNRd25kZkZrY1kiXSxbOSwiZW4tVVMiXSxbMTksIjIiXSxbMTcsIlswXSJdLFsyNCwiIl0sWzI5LCJmYWxzZSJdXV0"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxV7oKbLsrf_4ni_sCK45aEMVrMvAvhmX6z84qDTJJuZmN-TJXHS1yohe-Gpbaf6ak9c1Ni9iGcGSX31o3tijQ8ETGVNgOPWdy445LGURmmeiQEm24xgDH0VWIT5AvXglX8GYmyimA==?fccs=W1siQUtzUm9zXzJvTU51cm05dzZidHhOX0IxYWE3Q21TNjJ3VFpmQWxmazdKWUFXZ0pwZ2dQQkFrSWt6OHZiUmdSdERsSzZvWFdiVlZKSzViOGFTYUxBTnIyeXo3TnZMdExKbDRCRDVHS0g5X29vQUloUVp2ZWNCcHJXT3I1RElad3VHMm5IN2YzSTN3aWt5OEdJTXMzV1pVN0lhZ3NUVktkbGlnPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3NDIxNjMyMjksMzIzMDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbNyw5XSxudWxsLDIsbnVsbCwiZW4iXSwiaHR0cHM6Ly93d3cuZXhwZXJpbWVudGFyY2hpdmUuY29tL2V4cGVyaW1lbnRzL2luZXhoYXVzdGlibGUtYm90dGxlLyIsbnVsbCxbWzgsIjljUXduZGZGa2NZIl0sWzksImVuLVVTIl0sWzE5LCIyIl0sWzE3LCJbMF0iXSxbMjQsIiJdLFsyOSwiZmFsc2UiXV1d"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxWfGgnCZ3jtYIKov4YjbEHC_XNttR_9f5i-KoHYc9bL2odJ4pc1w53E-G-irvMQsVJyyVTsZ1E7FhhDGhDVWK6yT9h_RXYHde6OZAGXNj54r9IfIRnuQWlbjbJ-qmUl8XQ_Mi7vKg==?fccs=W1siQUtzUm9zXzJvTU51cm05dzZidHhOX0IxYWE3Q21TNjJ3VFpmQWxmazdKWUFXZ0pwZ2dQQkFrSWt6OHZiUmdSdERsSzZvWFdiVlZKSzViOGFTYUxBTnIyeXo3TnZMdExKbDRCRDVHS0g5X29vQUloUVp2ZWNCcHJXT3I1RElad3VHMm5IN2YzSTN3aWt5OEdJTXMzV1pVN0lhZ3NUVktkbGlnPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3NDIxNjMyMzAsNTIwMDAwMDBdLG51bGwsbnVsbCxudWxsLFtudWxsLFs3LDksNl0sbnVsbCwyLG51bGwsImVuIixudWxsLG51bGwsbnVsbCxudWxsLG51bGwsMV0sImh0dHBzOi8vd3d3LmV4cGVyaW1lbnRhcmNoaXZlLmNvbS9leHBlcmltZW50cy9pbmV4aGF1c3RpYmxlLWJvdHRsZS8iLG51bGwsW1s4LCI5Y1F3bmRmRmtjWSJdLFs5LCJlbi1VUyJdLFsxOSwiMiJdLFsxNywiWzBdIl0sWzI0LCIiXSxbMjksImZhbHNlIl1dXQ"></script></head>
+<body>
+
+<!-- Övre kodhalva för sidhuvud och sidfot vid utskrift -->
+<div class="sidtopp_utskrift"></div>
+<table id="utskriftstabell">
+<thead><tr><td>
+<div class="space_sidtopp_utskrift">&nbsp;</div>
+</td></tr></thead>
+<tbody><tr><td>
+<div class="content">
+
+
+
+<!-- G�r att inga CSS-animationer startar n�r sidan laddas -->
+<script>
+	$(window).load(function() {
+  $("body").removeClass("preload");
+});
+</script>
+
+
+
+
+
+
+<div id="sidtoppswrapper">
+
+<!-- Sidtoppsbild f�r utskrift -->
+<img id="sidtoppsbild_utskrift" src="/bilder/sidtopp_desktop_1920.png">
+
+<!-- Sidtoppsbild f�r screen -->
+<a href="/"><div id="sidtoppsbild"></div></a>
+
+
+
+
+
+<input class="osynlig-checkbox" type="checkbox" id="checkboxen">
+<label class="menyknapp" for="checkboxen"><span class="mittenstreck"></span></label>
+
+
+
+<div id="dropdown">
+
+<center>
+<img src="/bilder/bokstapel.png" id="bokstapel" usemap="#image-map"><br>
+
+
+
+<map name="image-map">
+	<area target="" alt="" title="" href="/" coords="89,60,82,71,81,82,87,94,208,108,252,76,247,65,253,48,220,41,215,60,202,66,179,63,171,49,172,37,137,30" shape="poly">
+    <area target="" alt="" title="" href="/biology/" coords="91,95,86,96,79,109,84,127,219,136,251,99,244,97,244,83,208,109" shape="poly">
+    <area target="" alt="" title="" href="/chemistry/" coords="100,131,92,138,92,150,95,163,225,171,258,136,252,127,258,111,248,105,220,136" shape="poly">
+    <area target="" alt="" title="" href="/physics/" coords="91,149,77,161,70,161,62,167,60,184,68,195,198,210,245,174,241,156,228,172,98,164" shape="poly">
+    <area target="" alt="" title="" href="/earth-science/" coords="80,198,73,201,66,209,66,219,73,232,203,239,238,200,232,196,232,186,196,211" shape="poly">
+    <area target="" alt="" title="" href="/astronomy/" coords="91,233,86,239,85,249,88,256,219,272,263,244,257,235,259,224,267,218,233,209,207,240" shape="poly">
+    <area target="" alt="" title="" href="/technology/" coords="86,256,79,264,76,275,81,289,207,303,258,270,253,265,253,252,220,275" shape="poly">
+    <area target="" alt="" title="" href="/fire/" coords="128,316,83,350,76,354,73,376,230,396,272,360,266,354,270,338,208,331,186,343,167,345,142,338,133,328" shape="poly">
+    <area target="" alt="" title="" href="/air/" coords="83,378,76,388,81,399,234,416,273,379,273,363,232,396" shape="poly">
+    <area target="" alt="" title="" href="/water/" coords="81,399,77,405,73,411,77,423,234,436,272,403,271,384,233,417" shape="poly">
+	
+    <area target="" alt="" title="" href="/science-projects/" coords="129,440,122,440,83,479,77,482,71,489,69,513,75,524,257,541,296,498,289,492,287,481,290,469,295,465,299,459,217,450,215,469,161,481,129,469" shape="poly">
+ 
+
+
+    <area target="" alt="" title="" href="/teachers-guide/" coords="73,522,65,528,61,546,63,558,67,566,249,583,293,540,287,534,285,524,293,505,253,540,193,534,108,528" shape="poly">
+    <area target="" alt="" title="" href="/search/" coords="127,591,93,621,86,627,84,637,88,644,195,651,233,620,229,613,229,600,235,592,216,589,211,603,210,614,193,623,174,628,153,619,141,619,128,623,120,621,118,613,122,609,129,608,129,599" shape="poly">
+    <area target="_blank" alt="" title="" href="https://www.youtube.com/channel/UC2JUYBeXkSmLeaQMWIaCWlQ" coords="87,644,85,653,88,663,196,669,232,641,228,636,230,623,195,651" shape="poly">
+    <area target="" alt="" title="" href="/about/" coords="88,663,84,668,85,679,90,683,197,686,233,656,229,650,230,642,196,669" shape="poly">
+	
+</map>
+
+
+
+</center>
+
+<!-- Slut dropdown -->
+</div>
+
+
+
+
+
+
+
+
+<!-- Slut sidtoppswrapper -->
+</div>
+
+<div class="valkommentext">
+Весёлые и простые научные эксперименты для детей и взрослых. 
+</div>
+
+<!--
+<div class="fb-page_container_valkomsttext">
+<div class="fb-page" data-href="https://www.facebook.com/experimentarkivet" data-tabs="" data-width="280" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/experimentarkivet" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/experimentarkivet" class="fb-page-lank">The Experiment Archive</a></blockquote></div>
+</div>
+-->
+
+
+
+
+<div id="ytterwrapper">
+<div id="innerwrapper">
+
+
+<div class="experimentrubrik_och_skrivare_wrapper">
+<div class="experimentrubrik_wrapper">
+<h1 class="experimentrubrik">Неиссякаемая бутылка</h1>
+<a href="javascript:window.print()" title="Печать"><img class="skrivare" src="/bilder/skrivare.png"></a>
+</div></div>
+
+
+<a href="/physics/"><div class="kategori">Физика</div></a>
+
+<div class="ingress">
+Бутылка, из которой никогда не заканчивается вода. Эксперимент о воздушном давлении и гравитации.
+</div>
+
+
+<table class="gilla-tabell">
+<tbody><tr class="gilla-tabell_ovre_rad">
+<td>Gilla:</td>
+<td class="gilla-tabell_tom_kolumn"></td>
+<td>Dela:</td>
+</tr>
+<tr>
+<td><div class="fb-like" data-href="https://experimentarchive.com/experiments/inexhaustible-bottle/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div></td>
+<td></td>
+<td><div class="addthis_inline_share_toolbox"></div></td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+
+<h2 class="film">Видео</h2>
+<div class="youtubecontainer">
+<img class="youtuberam" src="/bilder/tv.png">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H2WtkULiH8k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h2 class="det_har_behover_du">Материалы</h2>
+<ul class="det_har_behover_du">
+<li class="det_har_behover_du">1 пластиковая бутылка, не прозрачная</li>
+<li class="det_har_behover_du">1 трубка — Самый сложный материал для этой демонстрации. Трубка должна соответствовать двум требованиям: (1) она должна быть как минимум на 2-3&nbsp;см (1&nbsp;дюйм) длиннее, чем высота бутылки, и (2) она должна быть достаточно толстой, чтобы <em>едва</em> не проходить через горлышко бутылки. Трубка с внешним диаметром 22&nbsp;мм (7/8&nbsp;дюйма), что является стандартным размером для сантехники, идеально подходит для стандартной бутылки из-под газировки.</li>
+<li class="det_har_behover_du">1 пила (чтобы отпилить трубку)</li>
+<li class="det_har_behover_du">1 отвертка</li>
+<li class="det_har_behover_du">1 игла (или что-то другое, чтобы сделать отверстие в бутылке)</li>
+<li class="det_har_behover_du">1 ручка</li>
+<li class="det_har_behover_du">Духовка</li>
+<li class="det_har_behover_du">Вода</li>
+</ul>
+
+
+
+
+<div class="tva_kolumner_vid_utskrift">
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg 1">Шаг 1</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot1" src="/bilder/fotoram.png">
+<img class="foto rot1" src="1.jpg">
+</div>
+
+Получите свою бутылку и трубку.
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 2</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot-1" src="/bilder/fotoram.png">
+<img class="foto rot-1" src="2.jpg">
+</div>
+
+Нагрейте бутылку в духовке при 75&nbsp;°C (175&nbsp;°F) примерно 1&nbsp;минуту. Точное время зависит от бутылки. Она должна стать настолько мягкой, чтобы вы могли протолкнуть трубку через горлышко, но не настолько горячей, чтобы деформироваться.
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 3</h2>
+
+<div class="fotocontainer">
+<img class="fotoram" src="/bilder/fotoram.png">
+<img class="foto" src="3.jpg">
+</div>
+
+Протолкните трубку через горлышко бутылки до самого дна. Убедитесь, что трубка плотно прилегает к горлышку бутылки.
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 4</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot2" src="/bilder/fotoram.png">
+<img class="foto rot2" src="4.jpg">
+</div>
+
+Нарисуйте линию на трубке по краю горлышка бутылки.
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 5</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot-1" src="/bilder/fotoram.png">
+<img class="foto rot-1" src="5.jpg">
+</div>
+
+Вытяните трубку немного. Отпилите её чуть ниже линии. Расстояние между линией и местом распила должно быть примерно половиной длины горлышка бутылки.
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 6</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot-1" src="/bilder/fotoram.png">
+<img class="foto rot-1" src="6.jpg">
+</div>
+
+Снова вставьте трубку до дна бутылки. Используйте отвертку.
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 7</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot2" src="/bilder/fotoram.png">
+<img class="foto rot2" src="7.jpg">
+</div>
+
+
+Используйте иглу, чтобы сделать отверстие в бутылке примерно в 3&nbsp;см (1&nbsp;дюйм) ниже горлышка. Покрутите иглу, чтобы увеличить отверстие — диаметр 2&nbsp;мм (1/16&nbsp;дюйма) будет хорошим.
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 8</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot" src="/bilder/fotoram.png">
+<img class="foto rot" src="8.jpg">
+</div>
+
+Наполните бутылку водой, пока она не начнет вытекать через отверстие. Обратите внимание, что наполнять нужно медленно.
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 9</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot-1" src="/bilder/fotoram.png">
+<img class="foto rot-1" src="9.jpg">
+</div>
+
+Теперь фокус! Закройте отверстие пальцем и налейте воду в стакан.
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 10</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot1" src="/bilder/fotoram.png">
+<img class="foto rot1" src="10.jpg">
+</div>
+
+Наливайте, пока вода не перестанет течь. "О нет, кажется, в бутылке больше нет воды." Или...
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 11</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot" src="/bilder/fotoram.png">
+<img class="foto rot" src="11.jpg">
+</div>
+
+
+Поставьте бутылку вертикально и незаметно уберите палец с отверстия.
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 12</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot-1" src="/bilder/fotoram.png">
+<img class="foto rot-1" src="12.jpg">
+</div>
+
+Налейте снова. Абракадабра! В бутылке снова появилась вода! Повторите несколько раз, если ваша аудитория не понимает, насколько вы феноменальны.
+
+
+
+
+
+</div>
+
+
+</div> <!-- Slut två kolumner vid utskrift -->
+
+
+
+
+
+
+
+
+
+<h2 class="kort_forklaring">Краткое объяснение</h2>
+Когда бутылка стоит вертикально, трубка наполняется водой. Когда вы переворачиваете бутылку, из неё выливается только вода из трубки. Вода из остальной части бутылки не выливается, потому что воздух не может попасть внутрь бутылки.
+
+
+
+
+
+
+<h2 class="lang_forklaring">Подробное объяснение</h2>
+Когда бутылка стоит вертикально и вы не закрываете отверстие, трубка наполняется водой. Это происходит потому, что вода поступает в трубку снизу. Трубка наполняется до того же уровня, что и бутылка — то есть поверхность воды в трубке и в бутылке оказывается на одном уровне. Это происходит благодаря гравитации, которая тянет воду вниз настолько, насколько возможно, и таким образом обеспечивает, что уровень воды в обеих частях одинаковый.
+<br><br>
+Когда вы закрываете отверстие — и переворачиваете бутылку — из неё выливается только вода из трубки. Почему вода из бутылки не попадает в трубку и не выливается больше? Это происходит в некоторой степени, и воздух внутри бутылки "растягивается", чтобы заменить ушедшую воду. Это означает, что молекулы воздуха оказываются дальше друг от друга. А это, в свою очередь, означает, что воздух меньше давит на поверхность воды внутри бутылки (меньше молекул воздуха сталкивается — и давит — на каждый квадратный миллиметр поверхности воды). С другой стороны, воздух снаружи бутылки — который теперь также находится в трубке — давит на поверхность воды в трубке как обычно и возвращает воду обратно в бутылку, не давая ей вылиться.
+<br><br>
+Когда вы опустошили трубку — поставьте бутылку обратно, не отпуская отверстие. Теперь представьте, как воздух давит на поверхность воды, как на дне трубки, так и внутри бутылки. А воздух в трубке давит сильнее, поэтому уровень воды в бутылке намного выше, чем в трубке. Теперь уберите палец с отверстия. Теперь воздух втекает через отверстие — благодаря тому, что давление снаружи выше. Давление воздуха в бутылке теперь такое же, как и снаружи. Теперь гравитация снова может работать, не мешая разница в давлении, и выравнивает уровень воды в трубке и бутылке.
+<br><br>
+Практический момент — зазор между трубкой и дном бутылки должен быть маленьким. Недостаток этого в том, что наполнять бутылку водой будет долго, но преимущество — почти никакая вода не попадет в трубку, если вы не отпустите отверстие.
+
+
+  
+  
+<h2>Эксперимент</h2>
+Вы можете превратить эту демонстрацию в эксперимент. Это сделает её лучшим <a href="/science-projects/">научным проектом</a>. Для этого попробуйте ответить на один из следующих вопросов. Ответ на вопрос будет вашей гипотезой. Затем проверьте гипотезу, выполнив эксперимент.
+<ul class="experimentera">
+<li class="experimentera">Что произойдет, если всё время держать отверстие закрытым?</li>
+<li class="experimentera">Что произойдет, если никогда не закрывать отверстие?</li>
+<li class="experimentera">Что произойдет, если сделать отверстие больше?</li>
+<li class="experimentera">Что произойдет, если увеличить зазор между трубкой и дном бутылки?</li>
+<li class="experimentera">Что произойдет, если трубка не будет плотно прилегать к внутренней части горлышка бутылки?</li>
+</ul>
+
+
+
+
+
+<h2 class="variant">Вариации</h2>
+Демонстрацию, конечно, можно провести и с прозрачной бутылкой. Также работает с трубкой, которая слишком тонкая и не прилегает плотно к горлышку. Тогда можно закрыть зазор пластилином или горячим клеем. В обоих случаях будет сложно скрыть от зрителей, что с бутылкой что-то не так, но вы всё равно сможете попробовать демонстрацию.
+
+
+
+
+
+
+<table class="gilla-tabell">
+<tbody><tr class="gilla-tabell_ovre_rad">
+<td>Gilla:</td>
+<td class="gilla-tabell_tom_kolumn"></td>
+<td>Dela:</td>
+</tr>
+<tr>
+<td><div class="fb-like" data-href="https://experimentarchive.com/experiments/inexhaustible-bottle/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div></td>
+<td></td>
+<td><div class="addthis_inline_share_toolbox"></div></td>
+</tr>
+</tbody></table>
+
+
+
+
+</div> <!-- Slut innerwrapper -->
+</div> <!-- Slut ytterwrapper -->
+
+
+<div class="liknande_segment">
+
+
+<div class="mellanrum_mellan_senaste_och_sidfoten"></div>
+
+<div id="sidfoten">
+
+<h4 class="sidfot">Содержание сайта</h4>
+
+<div id="sidfoten_innerwrapper">
+
+<div id="sidfoten_vanster">
+<a href="/" class="sidfot">Главная</a><br>
+<a href="/biology/" class="sidfot">Биология</a><br>
+<a href="/chemistry/" class="sidfot">Химия</a><br>
+<a href="/physics/" class="sidfot">Физика</a><br>
+<a href="/earth-science/" class="sidfot">Науки о Земле</a><br>
+<a href="/astronomy/" class="sidfot">Астрономия</a><br>
+<a href="/technology/" class="sidfot">Технологии</a><br>
+<br>
+
+</div>
+
+<div id="sidfoten_mitten">
+<a href="/fire/" class="sidfot">Тема: Огонь</a><br>
+<a href="/air/" class="sidfot">Тема: Воздух</a><br>
+<a href="/water/" class="sidfot">Тема: Вода</a><br>
+<br>
+<a href="/science-projects/" class="sidfot">Научные проекты</a><br>
+<a href="/teachers-guide/" class="sidfot">Руководство для учителя</a><br>
+<br>
+</div>
+
+<div id="sidfoten_hoger">
+<a href="/search/" class="sidfot">Поиск</a><br>
+<a href="https://www.youtube.com/channel/UC2JUYBeXkSmLeaQMWIaCWlQ" target="_blank" class="sidfot">YouTube</a><br>
+<a href="/about/" class="sidfot">О сайте</a><br>
+</div>
+
+
+
+
+
+
+
+<div id="sidfoten_text_langst_ner">
+<br><br>
+©&nbsp;Архив Экспериментов. Весёлые и простые научные эксперименты для детей и взрослых. Биология, химия, физика, науки о Земле, астрономия, технологии, огонь, воздух и вода. Для детского сада, школы, после школы и дома. Также научные проекты и руководство для учителя.
+<br><br>
+<a href="#">Наверх</a>
+</div>
+
+<div id="sidfoten_text_langst_ner_mobil">
+<br><br>
+©&nbsp;Архив Экспериментов. Весёлые и простые научные эксперименты для детей и взрослых. Биология, химия, физика, науки о Земле, астрономия, технологии, огонь, воздух и вода. Для детского сада, школы, после школы и дома. Также научные проекты и руководство для учителя.
+<br><br>
+<a href="#">Наверх</a>
+</div>
+
+
+
+
+
+
+
+<!-- Slut sidfoten_innerwrapper-div -->
+</div>
+<!-- Slut sidfoten-div -->
+</div>
+
+
+
+
+
+
+<!-- AddThis-script -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d48264b498e12e4"></script> -->
+
+
+<!-- Google Analytics-script -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-146837875-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146837875-3');
+</script>
+
+
+<!-- Undre kodhalva för sidhuvud och sidfot vid utskrift -->
+</div>
+</td></tr></tbody>
+<tfoot><tr><td>
+<div class="space_sidfot_utskrift">&nbsp;</div>
+</td></tr></tfoot>
+</table>
+<div class="sidfot_utskrift">
+<img src="/bilder/sidfot_utskrift_vanster.jpg" class="sidfot_utskrift_vanster">
+<img src="/bilder/sidfot_utskrift_hoger.jpg" class="sidfot_utskrift_hoger">
+
+
+<div class="sidfotstext_utskrift">Архив Экспериментов Людвига Велландера. Весёлые и простые научные эксперименты для школы и дома. Биология, химия, физика, науки о Земле, астрономия, технологии, огонь, воздух и вода. Фото и видео.
+</div></div>
+
+
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2842037862813712&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;abgtt=6&amp;lmt=1742163228&amp;plaf=1%3A2%2C2%3A2%2C7%3A2&amp;plat=1%3A128%2C2%3A128%2C3%3A128%2C4%3A128%2C8%3A128%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1048576%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fwww.experimentarchive.com%2Fexperiments%2Finexhaustible-bottle%2F&amp;pra=5&amp;wgl=1&amp;aihb=0&amp;asro=0&amp;ailel=1~2~4~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&amp;aiael=1~2~3~4~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&amp;aicel=33~38&amp;aifxl=29_18~30_19&amp;aiixl=29_5~30_6&amp;aiapm=0.15&amp;aiapmi=0.33938&amp;aiact=0.5&amp;ailct=0.6&amp;uach=WyJMaW51eCIsIjYuMS44NSIsIng4NiIsIiIsIjEzNC4wLjY5OTguODgiLG51bGwsMCxudWxsLCI2NCIsW1siTm90OkEtQnJhbmQiLCIyNC4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxMzQuMC42OTk4Ljg4Il1dLDBd&amp;dt=1742163228695&amp;bpp=5&amp;bdt=491&amp;idt=38&amp;shv=r20250312&amp;mjsv=m202503110101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie_enabled=1&amp;eoidce=1&amp;nras=1&amp;correlator=5017731093191&amp;frm=20&amp;pv=2&amp;u_tz=0&amp;u_his=50&amp;u_h=600&amp;u_w=800&amp;u_ah=600&amp;u_aw=800&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=765&amp;bih=388&amp;scr_x=0&amp;scr_y=0&amp;eid=31091053%2C95354313%2C95354336%2C95354598&amp;oid=2&amp;pvsid=550487866873173&amp;tmod=107479783&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;fc=1920&amp;brdim=10%2C10%2C10%2C10%2C800%2C0%2C780%2C580%2C780%2C388&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1&amp;td=1&amp;tdf=2&amp;psd=W251bGwsW251bGwsbnVsbCxudWxsLCJkZXByZWNhdGVkX2thbm9uIl0sbnVsbCwxXQ..&amp;nt=1&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=98" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true"></iframe></div></ins><iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__tcfapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20250312/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>

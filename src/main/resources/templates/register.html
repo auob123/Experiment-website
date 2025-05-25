@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {
+            background: #f5f7fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .register-container {
+            max-width: 440px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 28px 24px 28px;
+        }
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 28px;
+            color: #2d3a4b;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #2d3a4b;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #cfd8dc;
+            border-radius: 6px;
+            font-size: 16px;
+            background: #f9fafb;
+            transition: border 0.2s;
+        }
+        input:focus {
+            border-color: #1976d2;
+            outline: none;
+        }
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background: #388e3c;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .register-btn:hover {
+            background: #256b27;
+        }
+        .success-message, .error-message {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+        .success-message {
+            color: #388e3c;
+        }
+        .error-message {
+            color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Регистрация</h2>
+        <div id="message"></div>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" name="username" placeholder="Введите имя пользователя" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Электронная почта</label>
+                <input type="email" id="email" name="email" placeholder="Введите email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+            </div>
+            <div class="form-group">
+                <label for="firstName">Имя</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Введите имя" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Фамилия</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Введите фамилию" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Роль</label>
+                <select id="role" name="role" required>
+                    <option value="">Выберите роль</option>
+                    <option value="student">Студент</option>
+                    <option value="teacher">Преподаватель</option>
+                    <option value="parents">Родители</option>
+                    <option value="guest">Гость</option>
+                </select>
+            </div>
+            <button type="submit" class="register-btn">Зарегистрироваться</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const role = document.getElementById('role').value;
+            const response = await fetch('/api/auth/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, email, password, firstName, lastName, role })
+            });
+            const messageDiv = document.getElementById('message');
+            if (response.ok) {
+                messageDiv.innerHTML = '<div class="success-message">Регистрация прошла успешно! Теперь вы можете войти.</div>';
+                document.getElementById('registerForm').reset();
+            } else {
+                const data = await response.json();
+                messageDiv.innerHTML = '<div class="error-message">' + (data.message || 'Ошибка регистрации.') + '</div>';
+            }
+        });
+    </script>
+</body>
+</html>
