@@ -63,7 +63,23 @@ public class AuthController {
             String jwt = jwtUtils.generateJwtToken(authentication);
 
             UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-            return ResponseEntity.ok(new JwtResponse(
+
+            // Set JWT as HttpOnly cookie
+            jakarta.servlet.http.Cookie jwtCookie = new jakarta.servlet.http.Cookie("jwt", jwt);
+            jwtCookie.setHttpOnly(true);
+            jwtCookie.setPath("/");
+            jwtCookie.setMaxAge(60 * 60 * 24); // 1 day
+            // Uncomment the next line if using HTTPS
+            // jwtCookie.setSecure(true);
+
+            // Set SameSite attribute (not directly supported by Cookie API, so set in header)
+            ResponseEntity.BodyBuilder responseBuilder = ResponseEntity.ok();
+            responseBuilder.header("Set-Cookie", String.format(
+                "jwt=%s; Max-Age=%d; Path=/; HttpOnly; SameSite=Lax",
+                jwt, 60 * 60 * 24
+            ));
+
+            return responseBuilder.body(new JwtResponse(
                     jwt, // Ensure this is the correct token field
                     userDetails.getId(),
                     userDetails.getUsername(),

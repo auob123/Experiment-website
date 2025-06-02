@@ -1,0 +1,428 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<!-- Google-fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Hindrar att sidan skalas om i iPhone -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<link th:href="@{/css/stilmall.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/css/utskrift.css}" rel="stylesheet" type="text/css" media="print">
+
+<!-- Favicon-kod -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=kPvPaOpNPB">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=kPvPaOpNPB">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=kPvPaOpNPB">
+<link rel="manifest" href="/site.webmanifest?v=kPvPaOpNPB">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=kPvPaOpNPB" color="#df4b1f">
+<link rel="shortcut icon" href="/favicon.ico?v=kPvPaOpNPB">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Google AdSense -->
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-D1LS557S6T&l=dataLayer&cx=c&gtm=457e53d0za200&tag_exp=102308675~102482433~102587591~102717422~102788824~102813109~102814060~102825837~102879719"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202503110101/show_ads_impl.js"></script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2842037862813712" crossorigin="anonymous" data-checked-head="true"></script>
+
+<title>Водяная имплозия</title>
+<meta name="description" content="Смотрите, как пустая бутылка внезапно наполняется водой! Это эксперимент о давлении и состояниях вещества.">
+<meta name="keywords" content="физика, эксперимент, наука, ярмарка, проект, демонстрация, дети, дом, школа, вода, имплозия, бутылка, пустая, внезапно, полная, вакуум, горячий, холодный, давление, толкать, пар">
+
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9wSqI5i0iwGdf6L1CERNdmsTPgVu44ewj8QxTBYgsv1LCPUVF7YmWOvTappqB1139jAymxUW/RO8zmMqo4zlAAAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A+d7vJfYtay4OUbdtRPZA3y7bKQLsxaMEPmxgfhBGqKXNrdkCQeJlUwqa6EBbSfjwFtJWTrWIioXeMW+y8bWAgQAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script async="" src="https://fundingchoicesmessages.google.com/i/ca-pub-2842037862813712?href=https%3A%2F%2Fwww.experimentarchive.com%2Fexperiments%2Fwater-implosion&ers=2"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxX3ZgbcewZq9_5H6YURlCuOnLknvlhPQZAXd88yxUFeQY4HHfVuMKlxpHzXaSs2ijt-MOQECVUFP3fX-zT4bYtafFs7yxx-_5OcfcvMr2Cu1ZX9j32MBdO7H0daU4ygTJu4FmZugA==?fccs=W1siQUtzUm9sOFlyZzJqQXoyNW9oWll6ZGtIQVpqR2JEendBdUZ2V0FXemZzUHRzSlZFd1FzLXhRWU1QT0wyZ1pyb2RUYmQ1ZXh1SUJUdlZkRW9wd01qaWNnX1BNcXVTbF9VSUxOeTFqSE4wZFZzek9HQ0NTeWhydnlWM2xpYjZaR2M4dk9EbktsRWkyTTN5Ykg3ZllVNUU3U3lyWlBkMVRaZFFRPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3NDIxNjMxNTIsMTMwMDAwMDBdLG51bGwsbnVsbCxudWxsLFtudWxsLFs3XV0sImh0dHM6Ly93d3cuZXhwZXJpbWVudGFyY2hpdmUuY29tL2V4cGVyaW1lbnRzL3dhdGVyLWltcGxvc2lvbi8iLG51bGwsW1s4LCI5Y1F3bmRmRmtjWSJdLFs5LCJlbi1VUyJdLFsxOSwiMiJdLFsxNywiWzBdIl0sWzI0LCIiXSxbMjksImZhbHNlIl1dXQ"></script></head>
+<body>
+
+<!-- Övre kodhalva för sidhuvud och sidfot vid utskrift -->
+<div class="sidtopp_utskrift"></div>
+<table id="utskriftstabell">
+<thead><tr><td>
+<div class="space_sidtopp_utskrift">&nbsp;</div>
+</td></tr></thead>
+<tbody><tr><td>
+<div class="content">
+
+
+
+<!-- Gr att inga CSS-animationer startar nr sidan laddas -->
+<script>
+	$(window).load(function() {
+  $("body").removeClass("preload");
+});
+</script>
+
+
+
+
+
+
+<div id="sidtoppswrapper">
+
+<!-- Sidtoppsbild fr utskrift -->
+<img id="sidtoppsbild_utskrift" src="/bilder/sidtopp_desktop_1920.png">
+
+<!-- Sidtoppsbild fr screen -->
+<a href="/"><div id="sidtoppsbild"></div></a>
+
+
+
+
+
+<input class="osynlig-checkbox" type="checkbox" id="checkboxen">
+<label class="menyknapp" for="checkboxen"><span class="mittenstreck"></span></label>
+
+
+
+<div id="dropdown">
+
+<center>
+<img src="/bilder/bokstapel.png" id="bokstapel" usemap="#image-map"><br>
+
+
+
+<map name="image-map">
+	<area target="" alt="" title="" href="/" coords="89,60,82,71,81,82,87,94,208,108,252,76,247,65,253,48,220,41,215,60,202,66,179,63,171,49,172,37,137,30" shape="poly">
+   
+    <area target="" alt="" title="" href="/physics/" coords="91,149,77,161,70,161,62,167,60,184,68,195,198,210,245,174,241,156,228,172,98,164" shape="poly">
+
+
+
+    <area target="" alt="" title="" href="/teachers-guide/" coords="73,522,65,528,61,546,63,558,67,566,249,583,293,540,287,534,285,524,293,505,253,540,193,534,108,528" shape="poly">
+    <area target="" alt="" title="" href="/search/" coords="127,591,93,621,86,627,84,637,88,644,195,651,233,620,229,613,229,600,235,592,216,589,211,603,210,614,193,623,174,628,153,619,141,619,128,623,120,621,118,613,122,609,129,608,129,599" shape="poly">
+    <area target="_blank" alt="" title="" href="https://www.youtube.com/channel/UC2JUYBeXkSmLeaQMWIaCWlQ" coords="87,644,85,653,88,663,196,669,232,641,228,636,230,623,195,651" shape="poly">
+    <area target="" alt="" title="" href="/about/" coords="88,663,84,668,85,679,90,683,197,686,233,656,229,650,230,642,196,669" shape="poly">
+	
+</map>
+
+
+
+</center>
+
+<!-- Slut dropdown -->
+</div>
+
+
+
+
+
+
+
+
+<!-- Slut sidtoppswrapper -->
+</div>
+
+<div class="valkommentext">
+Веселые и простые научные эксперименты для детей и взрослых. 
+</div>
+
+<!--
+<div class="fb-page_container_valkomsttext">
+<div class="fb-page" data-href="https://www.facebook.com/experimentarkivet" data-tabs="" data-width="280" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/experimentarkivet" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/experimentarkivet" class="fb-page-lank">Архив экспериментов</a></blockquote></div>
+</div>
+-->
+
+
+
+
+<div id="ytterwrapper">
+<div id="innerwrapper">
+
+
+<div class="experimentrubrik_och_skrivare_wrapper">
+<div class="experimentrubrik_wrapper">
+<h1 class="experimentrubrik">Водяная имплозия</h1>
+<a href="javascript:window.print()" title="Печать"><img class="skrivare" src="/bilder/skrivare.png"></a>
+</div></div>
+
+
+<a href="/physics/"><div class="kategori">Физика</div></a>
+
+<div class="ingress">
+Смотрите, как пустая бутылка внезапно наполняется водой! Это эксперимент о давлении и состояниях вещества.
+</div>
+
+
+<table class="gilla-tabell">
+<tbody><tr class="gilla-tabell_ovre_rad">
+<td>Нравится:</td>
+<td class="gilla-tabell_tom_kolumn"></td>
+<td>Поделиться:</td>
+</tr>
+<tr>
+<td><div class="fb-like" data-href="https://experimentarchive.com/experiments/water-implosion/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div></td>
+<td></td>
+<td><div class="addthis_inline_share_toolbox"></div></td>
+</tr>
+</tbody></table>
+
+
+<h2 class="film">Видео</h2>
+
+<div class="youtubecontainer">
+<img class="youtuberam" src="/bilder/tv.png">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i9G8N6Z9dfk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h2 class="det_har_behover_du">Материалы</h2>
+<ul class="det_har_behover_du">
+<li class="det_har_behover_du">1 стеклянная бутылка - желательно с маленьким отверстием</li>
+<li class="det_har_behover_du">1 большая чаша</li>
+<li class="det_har_behover_du">Микроволновая печь</li>
+<li class="det_har_behover_du">Вода</li>
+<li class="det_har_behover_du">Средства безопасности: 1 пара защитных очков, 1 пара защитных перчаток</li>
+</ul>
+
+
+<div class="varningslapp_miljolapp_container">
+<div class="varningslapp_overst"></div>
+<div class="varningslapp_mitten">
+<h2 class="varningsrubrik">Предупреждение!</h2>
+<b>Существуют следующие риски:</b>
+<ul class="varningslista">
+<li class="varningslista">Травма из-за взрыва бутылки.</li>
+<li class="varningslista">Кто-то может обжечься о бутылку или о воде. Иногда вода нагревается до такой степени, что становится горячее 100&nbsp;°C (212&nbsp;°F) без кипения, и затем внезапно закипает с взрывом.</li>
+</ul>
+<b>Поэтому примите следующие меры предосторожности:</b>
+<ul class="varningslista">
+<li class="varningslista">Проводите демонстрацию в компании взрослого.</li>
+<li class="varningslista">Носите защитные очки.</li>
+<li class="varningslista">Носите защитные перчатки.</li>
+<li class="varningslista">Всегда крепко держите бутылку и всегда направляйте ее открытие от себя, начиная с момента, когда вы открываете дверь микроволновой печи, до момента, когда вы погружаете ее в воду.</li>
+<li class="varningslista">Практикуйте, что делать, если кто-то порежется.</li>
+<li class="varningslista">Практикуйте, что делать, если кто-то обожжется.</li>
+</ul>
+</div>
+<div class="varningslapp_nederst"></div>
+<div class="tejp_nv"></div>
+<div class="tejp_no"></div>
+<div class="tejp_sv"></div>
+<div class="tejp_so"></div>
+</div>
+
+
+
+
+
+
+<div class="tva_kolumner_vid_utskrift">
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg1">Шаг 1</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot1" src="/bilder/fotoram.png">
+<img class="foto rot1" src="1.jpg">
+</div>
+Налейте около 2&nbsp;см (1&nbsp;дюйм) воды в стеклянную бутылку. Наполните чашу водой комнатной температуры.
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 2</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot-1" src="/bilder/fotoram.png">
+<img class="foto rot-1" src="2.jpg">
+</div>
+
+Поместите бутылку в микроволновую печь. Наденьте очки и перчатки. Поставьте чашу с водой рядом с микроволновой печью. Запустите микроволновую печь на полной мощности, пока вода не начнет закипать. Дайте ей закипеть в течение 30&nbsp;секунд.
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 3</h2>
+
+<div class="fotocontainer">
+<img class="fotoram" src="/bilder/fotoram.png">
+<img class="foto" src="3.jpg">
+</div>
+
+Откройте дверь, когда открытие бутылки направлено от вас. И теперь важно быть быстрым. Поднимите бутылку к чаше. Не забудьте постоянно направлять открытие бутылки от себя. Погрузите бутылку вверх дном в чашу. Убедитесь, что горлышко бутылки оказывается немного ниже поверхности.
+
+
+
+
+
+
+</div>
+
+
+
+<div class="sjok_vid_utskrift">
+<h2 class="steg">Шаг 4</h2>
+
+<div class="fotocontainer">
+<img class="fotoram rot2" src="/bilder/fotoram.png">
+<img class="foto rot2" src="4.jpg">
+</div>
+
+Смотрите, как бутылка внезапно наполняется водой!
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div> <!-- Slut två kolumner vid utskrift -->
+
+
+
+
+
+
+
+
+
+<h2 class="kort_forklaring">Краткое объяснение</h2>
+Когда вода закипает, она превращается из жидкого состояния в газообразное (это происходит даже при комнатной температуре - но при температуре кипения это происходит гораздо быстрее). Пар, т.е. вода в газообразном состоянии, заполняет бутылку и вытесняет воздух, который был там раньше. Пар и воздух оба прозрачны, поэтому вы не увидите, как это происходит.
+<br><br>
+Газ (например, воздух или водяной пар) всегда оказывает давление на окружающую среду. Это происходит потому, что частицы (атомы или молекулы), из которых состоит газ, постоянно движутся и сталкиваются друг с другом и с окружающей средой.
+<br><br>
+В момент, когда вы погружаете бутылку в воду, есть два "газовых тела", которые давят на поверхность воды в чаше. Одно - это водяной пар в бутылке, а другое - воздух в атмосфере. В момент, когда вы погружаете бутылку в воду, оба газовых тела давят одинаково на поверхность воды. Однако водяной пар в бутылке сразу же остывает. И он остывает настолько, что конденсируется в капли воды. Это означает, что внутри бутылки возникает пустота. Почти вакуум. Это означает, что газ (водяной пар), который только что был там и давил на поверхность воды, исчез. Однако газ (воздух) снаружи бутылки остается, и он все еще давит на поверхность воды. Поэтому воздух снаружи бутылки теперь толкает воду вверх в бутылку.
+<br><br>
+Легко говорить о "всасывании" в этой демонстрации, но на самом деле нет никакой "всасывающей силы" или чего-то подобного - только давление.
+<br><br>
+Ключ к успеху демонстрации заключается в том, что водяной пар не выходит из бутылки, пока у вас есть время погрузить ее в воду. Поэтому вам следует быстро погрузить бутылку в воду и выбрать бутылку с маленьким отверстием. Форма бутылки, вероятно, также играет роль, где некоторые бутылки лучше удерживают водяной пар. Также помните, что нужно погружать бутылку достаточно глубоко в воду, иначе воздух будет всасываться, когда уровень воды в чаше упадет.
+
+
+  
+<h2>Эксперимент</h2>
+Вы можете превратить эту демонстрацию в эксперимент. Это сделает его лучшим <a href="/science-projects/">научным проектом</a>. Для этого попробуйте ответить на один из следующих вопросов. Ответ на вопрос будет вашей гипотезой. Затем протестируйте гипотезу, проведя эксперимент.
+<ul class="experimentera">
+<li class="experimentera">Что произойдет, если вы подождете некоторое время, прежде чем погрузить бутылку в воду?</li>
+<li class="experimentera">Что произойдет, если у вас будет горячая вода в чаше?</li>
+<li class="experimentera">Что произойдет, если вы используете бутылку с более широким отверстием?</li>
+<li class="experimentera">Какая стеклянная бутылка работает лучше всего?</li>
+<li class="experimentera">Что произойдет, если вы заполните половину бутылки водой?</li>
+<li class="experimentera">Что произойдет, если вы позволите открытию бутылки просто касаться поверхности воды?</li>
+</ul>
+
+
+
+
+
+
+<table class="gilla-tabell">
+<tbody><tr class="gilla-tabell_ovre_rad">
+<td>Нравится:</td>
+<td class="gilla-tabell_tom_kolumn"></td>
+<td>Поделиться:</td>
+</tr>
+<tr>
+<td><div class="fb-like" data-href="https://experimentarchive.com/experiments/water-implosion/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div></td>
+<td></td>
+<td><div class="addthis_inline_share_toolbox"></div></td>
+</tr>
+</tbody></table>
+
+
+
+
+</div> <!-- Slut innerwrapper -->
+</div> <!-- Slut ytterwrapper -->
+
+
+<div class="liknande_segment">
+
+
+<div class="mellanrum_mellan_senaste_och_sidfoten"></div>
+
+<div id="sidfoten">
+
+<h4 class="sidfot">Содержимое веб-сайта</h4>
+
+<div id="sidfoten_innerwrapper">
+
+<div id="sidfoten_vanster">
+<a href="/" class="sidfot">Главная</a><br>
+
+<a href="/physics/" class="sidfot">Физика</a><br>
+
+</div>
+
+<div id="sidfoten_mitten">
+<a href="/fire/" class="sidfot">Тема огня</a><br>
+<a href="/air/" class="sidfot">Тема воздуха</a><br>
+<a href="/water/" class="sidfot">Тема воды</a><br>
+<br>
+<a href="/science-projects/" class="sidfot">Научные проекты</a><br>
+<a href="/teachers-guide/" class="sidfot">Руководство для учителей</a><br>
+<br>
+</div>
+
+<div id="sidfoten_hoger">
+<a href="/search/" class="sidfot">Поиск</a><br>
+<a href="https://www.youtube.com/channel/UC2JUYBeXkSmLeaQMWIaCWlQ" target="_blank" class="sidfot">YouTube</a><br>
+<a href="/about/" class="sidfot">О нас</a><br>
+</div>
+
+<div id="sidfoten_text_langst_ner">
+<br><br>
+©&nbsp;Архив экспериментов. Веселые и простые научные эксперименты для детей и взрослых. В биологии, химии, физике, землеведении, астрономии, технологии, огне, воздухе и воде. Для выполнения в детском саду, школе, после школы и дома. Также научные проекты и руководство для учителей.
+<br><br>
+<a href="#">Наверх</a>
+</div>
+
+<div id="sidfoten_text_langst_ner_mobil">
+<br><br>
+©&nbsp;Архив экспериментов. Веселые и простые научные эксперименты для детей и взрослых. В биологии, химии, физике, землеведении, астрономии, технологии, огне, воздухе и воде. Для выполнения в детском саду, школе, после школы и дома. Также научные проекты и руководство для учителей.
+<br><br>
+<a href="#">Наверх</a>
+</div>
+<!-- Slut sidfoten_innerwrapper-div -->
+</div>
+<!-- Slut sidfoten-div -->
+</div>
+
+<!-- AddThis-script -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d48264b498e12e4"></script> -->
+
+
+<!-- Google Analytics-script -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-146837875-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146837875-3');
+</script>
+
+<!-- Undre kodhalva för sidhuvud och sidfot vid utskrift -->
+</div>
+</td></tr></tbody>
+<tfoot><tr><td>
+<div class="space_sidfot_utskrift">&nbsp;</div>
+</td></tr></tfoot>
+</table>
+<div class="sidfot_utskrift">
+<img src="/bilder/sidfot_utskrift_vanster.jpg" class="sidfot_utskrift_vanster">
+<img src="/bilder/sidfot_utskrift_hoger.jpg" class="sidfot_utskrift_hoger">
+
+
+<div class="sidfotstext_utskrift">Архив экспериментов от Людвига Велландера. Веселые и простые научные эксперименты для школы или дома. Биология, химия, физика, землеведение, астрономия, технологии, огонь, воздух и вода. Фотографии и видео.
+</div></div>
+
+
+
+
+<iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__tcfapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20250312/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>
+</div>
+</write_to_file>

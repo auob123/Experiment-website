@@ -2,6 +2,7 @@
 package com.labassistant.controller;
 
 import com.labassistant.model.User;
+import com.labassistant.dto.UserDTO;
 import com.labassistant.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,9 +26,12 @@ public class AdminController {
     }
 
     @GetMapping("/users")
-    public ResponseEntity<List<User>> getAllUsers() {
+    public ResponseEntity<List<UserDTO>> getAllUsers() {
         logger.debug("Admin accessing all users");
-        return ResponseEntity.ok(userRepository.findAll());
+        List<UserDTO> userDTOs = userRepository.findAll().stream()
+                .map(UserDTO::new)
+                .toList();
+        return ResponseEntity.ok(userDTOs);
     }
 
     @PutMapping("/users/{userId}/roles")

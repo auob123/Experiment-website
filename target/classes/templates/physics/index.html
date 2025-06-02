@@ -1,0 +1,709 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"><head>
+
+<!-- Google-fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+
+<!-- Hindrar att sidan skalas om i iPhone -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+
+<link th:href="@{/css/stilmall.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/css/utskrift.css}" rel="stylesheet" type="text/css" media="print">
+
+<!-- Favicon-kod -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=kPvPaOpNPB">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=kPvPaOpNPB">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=kPvPaOpNPB">
+<link rel="manifest" href="/site.webmanifest?v=kPvPaOpNPB">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=kPvPaOpNPB" color="#df4b1f">
+<link rel="shortcut icon" href="/favicon.ico?v=kPvPaOpNPB">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Google AdSense -->
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-D1LS557S6T&amp;l=dataLayer&amp;cx=c&amp;gtm=457e53d0za200&amp;tag_exp=102308675~102482433~102587591~102717422~102788824~102813109~102814060~102825837~102879719"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202503110101/show_ads_impl.js"></script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2842037862813712" crossorigin="anonymous" data-checked-head="true"></script>
+
+<title>Эксперименты по физике</title>
+<meta name="description" content="Интересные и простые физические эксперименты для детей и взрослых. Опыты по электричеству, магнетизму, энергии, преобразованию энергии, теплу, движению и другим темам.">
+<meta name="keywords" content="физика, эксперименты, опыты, дети, взрослые, электричество, магнетизм, энергия, преобразование энергии, тепло, движение, школа, дом">
+
+
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9wSqI5i0iwGdf6L1CERNdmsTPgVu44ewj8QxTBYgsv1LCPUVF7YmWOvTappqB1139jAymxUW/RO8zmMqo4zlAAAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A+d7vJfYtay4OUbdtRPZA3y7bKQLsxaMEPmxgfhBGqKXNrdkCQeJlUwqa6EBbSfjwFtJWTrWIioXeMW+y8bWAgQAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script async="" src="https://fundingchoicesmessages.google.com/i/ca-pub-2842037862813712?href=https%3A%2F%2Fwww.experimentarchive.com%2Fphysics&amp;ers=2"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxW0UsKG-XVzVhCwVPthZmi0zUgy6kMx135zC2OxGlZjgsYMMta5TIdxtOlaNz8JuWT1T2VyjPOVpB0JhlJ9Hnu2fO1uXmoWBzkFhT1GgdwhSejpGjdAbdwlxm6DkkD2pbJwjVxG8w==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzQyMTYyNjQ0LDc5MTAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzddXSwiaHR0cHM6Ly93d3cuZXhwZXJpbWVudGFyY2hpdmUuY29tL3BoeXNpY3MvIixudWxsLFtbOCwiOWNRd25kZkZrY1kiXSxbOSwiZW4tVVMiXSxbMTksIjIiXSxbMTcsIlswXSJdLFsyNCwiIl0sWzI1LCJbWzk1MzQwMjUzLDk1MzQwMjU1XV0iXSxbMjksImZhbHNlIl1dXQ"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxUw6Ib4tAwB4yECKf2dB94MBpVrj10izpc_STtFIjTz_sZSHpis4nULVib1Zn2WpK9_pvvQd5bab9ajPSdvQeUTJru6gJ5WVSMVP6KCewg2OPsnnX_YsCwi-xb8N7Hgo8sbBtRt6A==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzQyMTYyNjQ0LDgxODAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsOV0sbnVsbCwyLG51bGwsImVuIl0sImh0dHBzOi8vd3d3LmV4cGVyaW1lbnRhcmNoaXZlLmNvbS9waHlzaWNzLyIsbnVsbCxbWzgsIjljUXduZGZGa2NZIl0sWzksImVuLVVTIl0sWzE5LCIyIl0sWzE3LCJbMF0iXSxbMjQsIiJdLFsyNSwiW1s5NTM0MDI1Myw5NTM0MDI1NV1dIl0sWzI5LCJmYWxzZSJdXV0"></script><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9wSqI5i0iwGdf6L1CERNdmsTPgVu44ewj8QxTBYgsv1LCPUVF7YmWOvTappqB1139jAymxUW/RO8zmMqo4zlAAAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A+d7vJfYtay4OUbdtRPZA3y7bKQLsxaMEPmxgfhBGqKXNrdkCQeJlUwqa6EBbSfjwFtJWTrWIioXeMW+y8bWAgQAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxVloaObIIQ1l6UD6ghCjcYQz28xFxRWDSC3a5Ndeekw2EGrzEKDdQELzdKp1fmp2uk_QpQYEPJIv1iSfqrS1T4SfR7dOSqwV5yMY7Nh4v6XDjQ2Tq5jzpRtl2v6vwKpSb17b37E6g==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzQyMTYyNjQ1LDUwMTAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsOSw2XSxudWxsLDIsbnVsbCwiZW4iLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCwxXSwiaHR0cHM6Ly93d3cuZXhwZXJpbWVudGFyY2hpdmUuY29tL3BoeXNpY3MvIixudWxsLFtbOCwiOWNRd25kZkZrY1kiXSxbOSwiZW4tVVMiXSxbMTksIjIiXSxbMTcsIlswXSJdLFsyNCwiIl0sWzI1LCJbWzk1MzQwMjUzLDk1MzQwMjU1XV0iXSxbMjksImZhbHNlIl1dXQ"></script></head>
+<body id="body">
+
+
+<!-- G�r att inga CSS-animationer startar n�r sidan laddas -->
+<script>
+	$(window).load(function() {
+  $("body").removeClass("preload");
+});
+</script><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2842037862813712&amp;output=html&amp;adk=293675617&amp;adf=814277786&amp;abgtt=6&amp;lmt=1742162644&amp;plaf=1%3A2%2C2%3A2%2C7%3A2&amp;plat=1%3A128%2C2%3A128%2C3%3A128%2C4%3A128%2C8%3A128%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1048576%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fwww.experimentarchive.com%2Fphysics%2F&amp;pra=5&amp;wgl=1&amp;aihb=0&amp;asro=0&amp;ailel=1~2~4~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&amp;aiael=1~2~3~4~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&amp;aicel=33~38&amp;aifxl=29_18~30_19&amp;aiixl=29_5~30_6&amp;aiapm=0.15&amp;aiapmi=0.33938&amp;aiact=0.3&amp;ailct=0.6&amp;uach=WyJMaW51eCIsIjYuMS44NSIsIng4NiIsIiIsIjEzNC4wLjY5OTguODgiLG51bGwsMCxudWxsLCI2NCIsW1siTm90OkEtQnJhbmQiLCIyNC4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxMzQuMC42OTk4Ljg4Il1dLDBd&amp;dt=1742162644132&amp;bpp=26&amp;bdt=181&amp;idt=257&amp;shv=r20250312&amp;mjsv=m202503110101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie_enabled=1&amp;eoidce=1&amp;nras=1&amp;correlator=3456495964190&amp;frm=20&amp;pv=2&amp;u_tz=0&amp;u_his=2&amp;u_h=600&amp;u_w=800&amp;u_ah=600&amp;u_aw=800&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=765&amp;bih=388&amp;scr_x=0&amp;scr_y=0&amp;eid=31091052%2C31091054%2C95331833%2C95354315%2C95354336%2C95354598%2C95340253%2C95340255&amp;oid=2&amp;pvsid=592091729374700&amp;tmod=107479783&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;fc=1920&amp;brdim=10%2C10%2C10%2C10%2C800%2C0%2C780%2C580%2C780%2C388&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1&amp;td=1&amp;tdf=2&amp;psd=W251bGwsW251bGwsbnVsbCxudWxsLCJkZXByZWNhdGVkX2thbm9uIl0sbnVsbCwxXQ..&amp;nt=1&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=321" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true"></iframe></div></ins>
+
+
+
+
+
+
+<div id="sidtoppswrapper">
+<div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px;">
+  <a href="/login" style="padding: 8px 18px; background: #1976d2; color: #fff; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.2s;" sec:authorize="isAnonymous()">Войти</a>
+  <a href="/registration" style="padding: 8px 18px; background: #388e3c; color: #fff; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.2s;" sec:authorize="isAnonymous()">Регистрация</a>
+  
+</div>
+
+<!-- Sidtoppsbild f�r utskrift -->
+<img id="sidtoppsbild_utskrift" th:src="@{/bilder/sidtopp_desktop_1920.png}">
+
+<!-- Sidtoppsbild f�r screen -->
+<a th:href="@{/}"><div id="sidtoppsbild"></div></a>
+
+
+
+
+
+<input class="osynlig-checkbox" type="checkbox" id="checkboxen">
+<label class="menyknapp" for="checkboxen"><span class="mittenstreck"></span></label>
+
+
+
+<div id="dropdown">
+
+<center>
+<img th:src="@{/bilder/bokstapel.png}" id="bokstapel" usemap="#image-map"><br>
+
+
+
+<map name="image-map">
+	<area target="" alt="" title="" href="/" coords="89,60,82,71,81,82,87,94,208,108,252,76,247,65,253,48,220,41,215,60,202,66,179,63,171,49,172,37,137,30" shape="poly">
+   
+    <area target="" alt="" title="" href="/physics/" coords="91,149,77,161,70,161,62,167,60,184,68,195,198,210,245,174,241,156,228,172,98,164" shape="poly">
+   
+
+
+    <area target="" alt="" title="" href="/teachers-guide/" coords="73,522,65,528,61,546,63,558,67,566,249,583,293,540,287,534,285,524,293,505,253,540,193,534,108,528" shape="poly">
+    <area target="" alt="" title="" href="/search/" coords="127,591,93,621,86,627,84,637,88,644,195,651,233,620,229,613,229,600,235,592,216,589,211,603,210,614,193,623,174,628,153,619,141,619,128,623,120,621,118,613,122,609,129,608,129,599" shape="poly">
+    <area target="_blank" alt="" title="" href="https://www.youtube.com/channel/UC2JUYBeXkSmLeaQMWIaCWlQ" coords="87,644,85,653,88,663,196,669,232,641,228,636,230,623,195,651" shape="poly">
+    <area target="" alt="" title="" href="/about/" coords="88,663,84,668,85,679,90,683,197,686,233,656,229,650,230,642,196,669" shape="poly">
+	
+</map>
+
+
+
+</center>
+
+<!-- Slut dropdown -->
+</div>
+
+
+
+
+
+
+
+
+<!-- Slut sidtoppswrapper -->
+</div>
+
+<div class="valkommentext">
+Интересные и простые научные эксперименты для детей и взрослых.
+</div>
+
+<!--
+<div class="fb-page_container_valkomsttext">
+<div class="fb-page" data-href="https://www.facebook.com/experimentarkivet" data-tabs="" data-width="280" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/experimentarkivet" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/experimentarkivet" class="fb-page-lank">The Experiment Archive</a></blockquote></div>
+</div>
+-->
+
+
+
+
+
+
+
+
+<center>
+<div class="mastercontainer">
+<h1 class="kategorirubrik">Эксперименты по физике</h1>
+
+<div class="kategoriingress">
+Все эксперименты по физике. Физика - это наука о материи, энергии и силах. Включает такие темы как электричество, магнетизм, преобразование энергии, тепло и движение.
+</div>
+
+<!-- "More" button to open camera screen recorder -->
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <a href="/camera-screen-recorder.html"
+     style="padding: 12px 32px; background: #8e24aa; color: #fff; border-radius: 8px; text-decoration: none; font-size: 1.2em; font-weight: bold; box-shadow: 0 2px 8px rgba(142,36,170,0.15); transition: background 0.2s;">
+    Ещё
+  </a>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/floating-ping-pong-ball/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_bla.png}">
+<img class="polaroidfoto" th:src="@{/experiments/floating-ping-pong-ball/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/floating-ping-pong-ball/}">
+<h2 class="polaroidrubrik">Парящий шарик для пинг-понга<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/floating-ping-pong-ball/}"><div class="polaroidingress">Заставьте шарик парить над феном. Демонстрация принципа Бернулли.</div></a>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/air-cannon/}">
+<img class="polaroidram rot2" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_bla.png}">
+<img class="polaroidfoto rot2" th:src="@{/experiments/air-cannon/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot2"><a th:href="@{/experiments/air-cannon/}">
+<h2 class="polaroidrubrik">Воздушная пушка<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/air-cannon/}"><div class="polaroidingress">Самый дешевый Airzooka в мире. Эксперимент с воздушными потоками.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/water-implosion/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gron.png}">
+<img class="polaroidfoto" th:src="@{/experiments/water-implosion/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/water-implosion/}">
+<h2 class="polaroidrubrik">Имплозия воды<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/water-implosion/}"><div class="polaroidingress">Пустая бутылка мгновенно наполняется водой. Эксперимент о давлении и состояниях воды.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/warm-and-cold-plates/}">
+<img class="polaroidram rot-1" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto rot-1" th:src="@{/experiments/warm-and-cold-plates/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-1"><a th:href="@{/experiments/warm-and-cold-plates/}">
+<h2 class="polaroidrubrik">Тёплые и холодные тарелки<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/warm-and-cold-plates/}"><div class="polaroidingress">Почему лёд тает быстрее на холодной тарелке? Эксперимент о теплопередаче.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/inexhaustible-bottle/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_rosa.png}">
+<img class="polaroidfoto" th:src="@{/experiments/inexhaustible-bottle/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/inexhaustible-bottle/}">
+<h2 class="polaroidrubrik">Неиссякаемая бутылка<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/inexhaustible-bottle/}"><div class="polaroidingress">Бутылка, которая никогда не опустошается. Об атмосферном давлении и гравитации.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/heavy-smoke/}">
+<img class="polaroidram rot-2" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_bla.png}">
+<img class="polaroidfoto rot-2" th:src="@{/experiments/heavy-smoke/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-2"><a th:href="@{/experiments/heavy-smoke/}">
+<h2 class="polaroidrubrik">Тяжёлый дым<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/heavy-smoke/}"><div class="polaroidingress">Создайте холодный тяжёлый дым. Эксперимент о плавучести веществ.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/brownian-motion/}">
+<img class="polaroidram rot-2" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto rot-2" th:src="@{/experiments/brownian-motion/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-2"><a th:href="@{/experiments/brownian-motion/}">
+<h2 class="polaroidrubrik">Броуновское движение<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/brownian-motion/}"><div class="polaroidingress">Наблюдайте движение частиц в воде. Эксперимент о температуре и молекулах.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/flying-static-ring/}">
+<img class="polaroidram rot1" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto rot1" th:src="@{/experiments/flying-static-ring/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot1"><a th:href="@{/experiments/flying-static-ring/}">
+<h2 class="polaroidrubrik">Парящее статическое кольцо<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/flying-static-ring/}"><div class="polaroidingress">Заставьте пластиковое кольцо парить над шаром! Эксперимент о статическом электричестве.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/burning-money/}">
+<img class="polaroidram rot-2" th:src="@{/bilder/polaroidram2_special.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_bla.png}">
+<img class="polaroidfoto rot-2" th:src="@{/experiments/burning-money/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-2"><a th:href="@{/experiments/burning-money/}">
+<h2 class="polaroidrubrik">Специальный: Горящие деньги<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/burning-money/}"><div class="polaroidingress">Эксперимент об энергии, тепле, химических реакциях и воде.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/burning-towel/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1_special.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_orange.png}">
+<img class="polaroidfoto" th:src="@{/experiments/burning-towel/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/burning-towel/}">
+<h2 class="polaroidrubrik">Специальный: Негорящее полотенце<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/burning-towel/}"><div class="polaroidingress">Почему полотенце не горит? Об энергии, тепле и химических реакциях.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/water-sucking-bottle/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto" th:src="@{/experiments/water-sucking-bottle/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/water-sucking-bottle/}">
+<h2 class="polaroidrubrik">Всасывающая бутылка<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/water-sucking-bottle/}"><div class="polaroidingress">Охладите воздух в бутылке и втяните воду. Эксперимент о давлении и температуре.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/water-sucking-glass/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto" th:src="@{/experiments/water-sucking-glass/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/water-sucking-glass/}">
+<h2 class="polaroidrubrik">Всасывающий стакан<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/water-sucking-glass/}"><div class="polaroidingress">Охладите воздух в стакане и втяните воду. Эксперимент о давлении и температуре.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/imploding-soda-can/}">
+<img class="polaroidram rot1" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto rot1" th:src="@{/experiments/imploding-soda-can/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot1"><a th:href="@{/experiments/imploding-soda-can/}">
+<h2 class="polaroidrubrik">Имплозия банки с газировкой<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/imploding-soda-can/}"><div class="polaroidingress">Раздавите банку с помощью давления воздуха. Эксперимент о давлении, температуре и состояниях вещества.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/rolling-static-soda-can/}">
+<img class="polaroidram rot1" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto rot1" th:src="@{/experiments/rolling-static-soda-can/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot1"><a th:href="@{/experiments/rolling-static-soda-can/}">
+<h2 class="polaroidrubrik">Катящаяся статическая банка<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/rolling-static-soda-can/}"><div class="polaroidingress">Зарядите воздушный шар и наблюдайте. Эксперимент о статическом электричестве.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/static-paper-ghost/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_rod.png}">
+<img class="polaroidfoto" th:src="@{/experiments/static-paper-ghost/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/static-paper-ghost/}">
+<h2 class="polaroidrubrik">Бумажный призрак<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/static-paper-ghost/}"><div class="polaroidingress">В чём секрет поднимающегося призрака? Эксперимент о статическом электричестве.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/shrinking-chip-bag/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_bla.png}">
+<img class="polaroidfoto" th:src="@{/experiments/shrinking-chip-bag/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/shrinking-chip-bag/}">
+<h2 class="polaroidrubrik">Сжимающийся пакет от чипсов<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/shrinking-chip-bag/}"><div class="polaroidingress">Уменьшите пакет от чипсов в микроволновке. Эксперимент о микроволнах и пластике.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/electric-motor/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gron.png}">
+<img class="polaroidfoto" th:src="@{/experiments/electric-motor/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/electric-motor/}">
+<h2 class="polaroidrubrik">Электродвигатель<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/electric-motor/}"><div class="polaroidingress">Соберите униполярный мотор с батарейкой и магнитами. Об электричестве и магнетизме.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/flashy-electric-motor/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto" th:src="@{/experiments/flashy-electric-motor/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/flashy-electric-motor/}">
+<h2 class="polaroidrubrik">Яркий электродвигатель<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/flashy-electric-motor/}"><div class="polaroidingress">Соберите униполярный мотор с подсветкой. Об электричестве и магнетизме.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/balloon-rocket/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gron.png}">
+<img class="polaroidfoto" th:src="@{/experiments/balloon-rocket/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/balloon-rocket/}">
+<h2 class="polaroidrubrik">Воздушная ракета<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/balloon-rocket/}"><div class="polaroidingress">Создайте ракету из воздушного шарика и нитки. О третьем законе Ньютона.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/water-whistle/}">
+<img class="polaroidram rot-1" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto rot-1" th:src="@{/experiments/water-whistle/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-1"><a th:href="@{/experiments/water-whistle/}">
+<h2 class="polaroidrubrik">Водяной свисток<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/water-whistle/}"><div class="polaroidingress">Сделайте свисток из соломинки. О музыкальных тонах и звуковых волнах.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/wind-up-spinner-toy/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto" th:src="@{/experiments/wind-up-spinner-toy/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/wind-up-spinner-toy/}">
+<h2 class="polaroidrubrik">Игрушка-волчок<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/wind-up-spinner-toy/}"><div class="polaroidingress">Создайте свою научную игрушку. Эксперимент о преобразовании энергии.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/balancing-soda-can/}">
+<img class="polaroidram rot-2" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_bla.png}">
+<img class="polaroidfoto rot-2" th:src="@{/experiments/balancing-soda-can/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-2"><a th:href="@{/experiments/balancing-soda-can/}">
+<h2 class="polaroidrubrik">Балансирующая банка<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/balancing-soda-can/}"><div class="polaroidingress">Весёлый эксперимент на баланс. О центре масс и устойчивости.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/fireproof-balloon/}">
+<img class="polaroidram rot-1" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto rot-1" th:src="@{/experiments/fireproof-balloon/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-1"><a th:href="@{/experiments/fireproof-balloon/}">
+<h2 class="polaroidrubrik">Огнеупорный шарик<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/fireproof-balloon/}"><div class="polaroidingress">Негорящий воздушный шар. О способности воды поглощать тепло.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/straw-propeller/}">
+<img class="polaroidram rot-2" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_rod.png}">
+<img class="polaroidfoto rot-2" th:src="@{/experiments/straw-propeller/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-2"><a th:href="@{/experiments/straw-propeller/}">
+<h2 class="polaroidrubrik">Пропеллер из соломинок<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/straw-propeller/}"><div class="polaroidingress">Игрушечный пропеллер из двух соломинок. О движении воздушных потоков.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/electromagnet/}">
+<img class="polaroidram rot-2" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_rod.png}">
+<img class="polaroidfoto rot-2" th:src="@{/experiments/electromagnet/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-2"><a th:href="@{/experiments/electromagnet/}">
+<h2 class="polaroidrubrik">Электромагнит<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/electromagnet/}"><div class="polaroidingress">Создайте электромагнит и поднимайте предметы. О превращении провода в магнит.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/straw-rocket-launcher/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_rosa.png}">
+<img class="polaroidfoto" th:src="@{/experiments/straw-rocket-launcher/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/straw-rocket-launcher/}">
+<h2 class="polaroidrubrik">Пусковая установка из соломинок<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/straw-rocket-launcher/}"><div class="polaroidingress">Создайте пусковую установку из бутылки и соломинок. О давлении воздуха.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/straw-duck-call/}">
+<img class="polaroidram rot2" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_bla.png}">
+<img class="polaroidfoto rot2" th:src="@{/experiments/straw-duck-call/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot2"><a th:href="@{/experiments/straw-duck-call/}">
+<h2 class="polaroidrubrik">Утка из соломинки<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/straw-duck-call/}"><div class="polaroidingress">Создайте "завораживающий" духовой инструмент. О музыкальных звуках.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/silo-of-salt/}">
+<img class="polaroidram rot-2" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_bla.png}">
+<img class="polaroidfoto rot-2" th:src="@{/experiments/silo-of-salt/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-2"><a th:href="@{/experiments/silo-of-salt/}">
+<h2 class="polaroidrubrik">Силос с солью<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/silo-of-salt/}"><div class="polaroidingress">Попробуйте разорвать бумагу - не получится! О распределении давления.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/microwave-light-bulb/}">
+<img class="polaroidram rot-1" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_gul.png}">
+<img class="polaroidfoto rot-1" th:src="@{/experiments/microwave-light-bulb/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-1"><a th:href="@{/experiments/microwave-light-bulb/}">
+<h2 class="polaroidrubrik">Лампочка в микроволновке<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/microwave-light-bulb/}"><div class="polaroidingress">Зажгите лампочку в микроволновой печи. Эксперимент об энергии.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/homemade-marble-run/}">
+<img class="polaroidram" th:src="@{/bilder/polaroidram1.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_orange.png}">
+<img class="polaroidfoto" th:src="@{/experiments/homemade-marble-run/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta"><a th:href="@{/experiments/homemade-marble-run/}">
+<h2 class="polaroidrubrik">Самодельный лабиринт<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/homemade-marble-run/}"><div class="polaroidingress">Постройте лабиринт для шарика на стене. О гравитации и кинетической энергии.</div></a>
+</div>
+
+</div>
+</div>
+
+<div class="polaroidcontainer">
+<div class="polaroidcontainer_inre">
+<a th:href="@{/experiments/cartesian-diver/}">
+<img class="polaroidram rot-2" th:src="@{/bilder/polaroidram2.png}">
+<img class="knappnal" th:src="@{/bilder/knappnal_rod.png}">
+<img class="polaroidfoto rot-2" th:src="@{/experiments/cartesian-diver/push.jpg}">
+</a><div class="polaroidtextruta polaroidtextruta_rot-2"><a th:href="@{/experiments/cartesian-diver/}">
+<h2 class="polaroidrubrik">Картезианский водолаз<br></h2>
+</a><a th:href="@{/physics/}"><div class="polaroidkategori">Физика</div></a>
+<a th:href="@{/experiments/cartesian-diver/}"><div class="polaroidingress">Сожмите бутылку - спички утонут. Эксперимент о плавучести.</div></a>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Slut mastercontainer -->
+</div>
+</center>
+
+
+<div class="mellanrum_mellan_senaste_och_sidfoten"></div>
+
+<div id="sidfoten">
+
+<h4 class="sidfot">Содержание сайта</h4>
+
+<div id="sidfoten_innerwrapper">
+
+<div id="sidfoten_vanster">
+<a th:href="@{/}" class="sidfot">Главная</a><br>
+
+<a th:href="@{/physics/}" class="sidfot">Физика</a><br>
+
+<br>
+
+</div>
+
+<div id="sidfoten_mitten">
+<a th:href="@{/fire/}" class="sidfot">Тема: Огонь</a><br>
+<a th:href="@{/air/}" class="sidfot">Тема: Воздух</a><br>
+<a th:href="@{/water/}" class="sidfot">Тема: Вода</a><br>
+<br>
+<a th:href="@{/science-projects/}" class="sidfot">Научные проекты</a><br>
+<a th:href="@{/teachers-guide/}" class="sidfot">Руководство для учителей</a><br>
+<br>
+</div>
+
+<div id="sidfoten_hoger">
+<a th:href="@{/search/}" class="sidfot">Поиск</a><br>
+<a href="https://www.youtube.com/channel/UC2JUYBeXkSmLeaQMWIaCWlQ" target="_blank" class="sidfot">YouTube</a><br>
+<a th:href="@{/about/}" class="sidfot">О проекте</a><br>
+</div>
+
+
+
+
+
+
+
+<div id="sidfoten_text_langst_ner">
+<br><br>
+©&nbsp;Архив экспериментов. Интересные и простые научные эксперименты для детей и взрослых. В области биологии, химии, физики, наук о Земле, астрономии, технологий, огня, воздуха и воды. Для проведения в детских садах, школах, дома. Также научные проекты и руководство для учителей.
+<br><br>
+<a href="#">Наверх</a>
+</div>
+
+<div id="sidfoten_text_langst_ner_mobil">
+<br><br>
+©&nbsp;Архив экспериментов. Интересные и простые научные эксперименты для детей и взрослых. В области биологии, химии, физики, наук о Земле, астрономии, технологий, огня, воздуха и воды. Для проведения в детских садах, школах, дома. Также научные проекты и руководство для учителей.
+<br><br>
+<a href="#">Наверх</a>
+</div>
+
+
+
+
+
+
+
+<!-- Slut sidfoten_innerwrapper-div -->
+</div>
+<!-- Slut sidfoten-div -->
+</div>
+
+
+
+
+
+
+<!-- AddThis-script -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d48264b498e12e4"></script> -->
+
+
+<!-- Google Analytics-script -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-146837875-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146837875-3');
+</script>
+
+
+
+<iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__tcfapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20250312/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>

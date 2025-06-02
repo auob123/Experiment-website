@@ -12,3 +12,815 @@ Action:
 
 Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
 
+2025-05-21 04:17:33 ERROR [http-nio-8080-exec-6] JwtUtils.java: Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2025-05-21 04:18:45 ERROR [http-nio-8080-exec-4] JwtUtils.java: Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2025-05-21 04:19:25 ERROR [http-nio-8080-exec-7] JwtUtils.java: Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2025-05-21 04:21:54 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-21 04:22:27 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-21 04:24:03 ERROR [http-nio-8080-exec-3] JwtUtils.java: Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2025-05-21 04:30:36 ERROR [http-nio-8080-exec-4] AuthController.java: Authentication failed for user: string
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
+2025-05-21 04:30:47 ERROR [http-nio-8080-exec-1] AuthController.java: Authentication failed for user: string
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
+2025-05-21 20:22:41 ERROR [http-nio-8080-exec-1] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-1] Exception processing template "index": Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+2025-05-21 20:22:41 ERROR [http-nio-8080-exec-1] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+2025-05-21 20:22:49 ERROR [http-nio-8080-exec-5] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-5] Exception processing template "index": Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+2025-05-21 20:22:49 ERROR [http-nio-8080-exec-5] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+2025-05-21 20:23:21 ERROR [http-nio-8080-exec-5] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-5] Exception processing template "index": Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+2025-05-21 20:23:21 ERROR [http-nio-8080-exec-5] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+2025-05-22 01:02:23 ERROR [http-nio-8080-exec-1] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-1] Exception processing template "index": Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+2025-05-22 01:02:23 ERROR [http-nio-8080-exec-1] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+2025-05-22 02:16:26 ERROR [http-nio-8080-exec-1] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-1] Exception processing template "experiments/floating-ping-pong-ball/index": Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:16:26 ERROR [http-nio-8080-exec-1] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:16:48 ERROR [http-nio-8080-exec-3] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-3] Exception processing template "experiments/floating-ping-pong-ball/index": Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:16:48 ERROR [http-nio-8080-exec-3] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:17:04 ERROR [http-nio-8080-exec-5] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-5] Exception processing template "experiments/floating-ping-pong-ball/index": Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:17:04 ERROR [http-nio-8080-exec-5] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:18:04 ERROR [http-nio-8080-exec-3] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-3] Exception processing template "experiments/floating-ping-pong-ball/index": Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:18:04 ERROR [http-nio-8080-exec-3] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:18:10 ERROR [http-nio-8080-exec-8] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-8] Exception processing template "experiments/floating-ping-pong-ball/index": Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:18:10 ERROR [http-nio-8080-exec-8] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:18:15 ERROR [http-nio-8080-exec-5] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-5] Exception processing template "experiments/floating-ping-pong-ball/index": Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-22 02:18:15 ERROR [http-nio-8080-exec-5] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/floating-ping-pong-ball/index" - line 79, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-24 00:34:13 ERROR [main] SqlExceptionHelper.java: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-05-25 01:30:56 ERROR [http-nio-8080-exec-6] AuthController.java: Authentication failed for user: john
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
+2025-05-25 01:31:08 ERROR [http-nio-8080-exec-7] AuthController.java: Authentication failed for user: john
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
+2025-05-25 01:32:58 ERROR [http-nio-8080-exec-6] AuthController.java: Authentication failed for user: john
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
+2025-05-25 03:11:08 ERROR [main] LoggingFailureAnalysisReporter.java: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-25 03:13:10 ERROR [main] LoggingFailureAnalysisReporter.java: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-25 19:48:48 ERROR [main] SqlExceptionHelper.java: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-05-25 19:48:48 ERROR [main] AbstractEntityManagerFactoryBean.java: Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-05-25 19:48:48 ERROR [main] TomcatStarter.java: Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-05-25 19:48:49 ERROR [main] SpringApplication.java: Application run failed
+java.net.ConnectException: Connection timed out: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+Wrapped by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+Wrapped by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+Wrapped by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+Wrapped by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/labassistant/config/JpaConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+Wrapped by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+Wrapped by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+Wrapped by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+Wrapped by: org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+2025-05-25 19:50:22 ERROR [main] SqlExceptionHelper.java: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-05-25 19:50:22 ERROR [main] AbstractEntityManagerFactoryBean.java: Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-05-25 19:50:22 ERROR [main] TomcatStarter.java: Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-05-25 19:50:22 ERROR [main] SpringApplication.java: Application run failed
+java.net.ConnectException: Connection timed out: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+Wrapped by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+Wrapped by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+Wrapped by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+Wrapped by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/labassistant/config/JpaConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+Wrapped by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+Wrapped by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+Wrapped by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+Wrapped by: org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+2025-05-25 19:54:02 ERROR [main] SqlExceptionHelper.java: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-05-25 19:54:03 ERROR [main] AbstractEntityManagerFactoryBean.java: Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-05-25 19:54:03 ERROR [main] TomcatStarter.java: Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-05-25 19:54:03 ERROR [main] SpringApplication.java: Application run failed
+java.net.ConnectException: Connection timed out: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+Wrapped by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+Wrapped by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+Wrapped by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+Wrapped by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/labassistant/config/JpaConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+Wrapped by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+Wrapped by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+Wrapped by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+Wrapped by: org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+2025-05-25 20:03:51 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:03:51 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:03:53 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:03:53 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:03:53 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:03:54 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:03:54 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:03:54 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:24 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:25 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:26 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:31 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:04:44 ERROR [http-nio-8080-exec-8] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-8] Exception processing template "physics/index-logged": Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'profilePic' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225)
+Wrapped by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+2025-05-25 20:04:44 ERROR [http-nio-8080-exec-8] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'profilePic' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225)
+2025-05-25 20:04:44 ERROR [http-nio-8080-exec-8] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/physics] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 20:05:16 ERROR [http-nio-8080-exec-3] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-3] Exception processing template "physics/index-logged": Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'profilePic' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225)
+Wrapped by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+2025-05-25 20:05:16 ERROR [http-nio-8080-exec-3] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'profilePic' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225)
+2025-05-25 20:05:17 ERROR [http-nio-8080-exec-3] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/physics] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 20:05:26 ERROR [http-nio-8080-exec-10] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-10] Exception processing template "physics/index-logged": Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'profilePic' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225)
+Wrapped by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+2025-05-25 20:05:26 ERROR [http-nio-8080-exec-10] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'profilePic' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225)
+2025-05-25 20:05:26 ERROR [http-nio-8080-exec-10] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/physics] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 20:06:08 ERROR [http-nio-8080-exec-2] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-2] Exception processing template "physics/index-logged": Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'profilePic' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225)
+Wrapped by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+2025-05-25 20:06:08 ERROR [http-nio-8080-exec-2] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'profilePic' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225)
+2025-05-25 20:06:08 ERROR [http-nio-8080-exec-2] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/physics] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 20:06:19 ERROR [http-nio-8080-exec-9] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-9] Exception processing template "physics/index-logged": Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'profilePic' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225)
+Wrapped by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+2025-05-25 20:06:19 ERROR [http-nio-8080-exec-9] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'profilePic' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:225)
+2025-05-25 20:06:19 ERROR [http-nio-8080-exec-9] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/physics] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 20:21:58 ERROR [main] SqlExceptionHelper.java: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-05-25 20:21:58 ERROR [main] AbstractEntityManagerFactoryBean.java: Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-05-25 20:21:58 ERROR [main] TomcatStarter.java: Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-05-25 20:21:58 ERROR [main] SpringApplication.java: Application run failed
+java.net.ConnectException: Connection timed out: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+Wrapped by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+Wrapped by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+Wrapped by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+Wrapped by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/labassistant/config/JpaConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+Wrapped by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+Wrapped by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+Wrapped by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+Wrapped by: org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+2025-05-25 20:25:29 ERROR [main] SqlExceptionHelper.java: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-05-25 20:25:29 ERROR [main] AbstractEntityManagerFactoryBean.java: Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-05-25 20:25:29 ERROR [main] TomcatStarter.java: Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-05-25 20:25:29 ERROR [main] SpringApplication.java: Application run failed
+java.net.ConnectException: Connection timed out: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+Wrapped by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+Wrapped by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+Wrapped by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+Wrapped by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/labassistant/config/JpaConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+Wrapped by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+Wrapped by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailsServiceImpl' defined in file [D:\new_spring_app\target\classes\com\labassistant\security\services\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.labassistant.repository.UserRepository defined in @EnableJpaRepositories declared on PhysicsLabAssistantApplication: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+Wrapped by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+Wrapped by: org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+2025-05-25 20:32:33 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:32:34 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:32:37 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:32:37 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:32:37 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:32:37 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:32:38 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:32:38 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:17 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:17 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:17 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:17 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:17 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:17 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:18 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:21 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:21 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:21 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:21 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:21 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:23 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:23 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:23 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:23 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:23 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:23 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:24 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:26 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:29 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:33:40 ERROR [http-nio-8080-exec-4] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-4] Exception processing template "physics/index-logged": Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'profilePic' cannot be found on object of type 'com.labassistant.security.services.UserDetailsImpl' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+Wrapped by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+2025-05-25 20:33:40 ERROR [http-nio-8080-exec-4] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'profilePic' cannot be found on object of type 'com.labassistant.security.services.UserDetailsImpl' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+2025-05-25 20:33:40 ERROR [http-nio-8080-exec-4] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/physics] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 20:33:52 ERROR [http-nio-8080-exec-2] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-2] Exception processing template "physics/index-logged": Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'profilePic' cannot be found on object of type 'com.labassistant.security.services.UserDetailsImpl' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+Wrapped by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+2025-05-25 20:33:52 ERROR [http-nio-8080-exec-2] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'profilePic' cannot be found on object of type 'com.labassistant.security.services.UserDetailsImpl' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+2025-05-25 20:33:52 ERROR [http-nio-8080-exec-2] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/physics] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 20:34:26 ERROR [http-nio-8080-exec-4] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-4] Exception processing template "physics/index-logged": Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'profilePic' cannot be found on object of type 'com.labassistant.security.services.UserDetailsImpl' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+Wrapped by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+2025-05-25 20:34:26 ERROR [http-nio-8080-exec-4] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.profilePic != null" (template: "physics/index-logged" - line 57, col 14)] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'profilePic' cannot be found on object of type 'com.labassistant.security.services.UserDetailsImpl' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+2025-05-25 20:34:26 ERROR [http-nio-8080-exec-4] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/physics] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 20:47:30 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:32 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:35 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:35 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:35 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:36 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:36 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:36 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:37 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:37 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:37 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:37 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:37 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:37 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:38 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:52 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:52 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:52 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:52 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:52 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:52 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:52 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:52 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:52 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:52 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 20:47:53 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:16 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:17 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:19 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:19 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:19 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:19 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:20 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:20 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:22 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:22 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:22 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:22 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:22 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:22 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:29 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:29 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:29 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:31 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:32 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:33 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:33 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:23:59 ERROR [http-nio-8080-exec-1] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-1] Exception processing template "experiments/cartesian-diver/index": Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:23:59 ERROR [http-nio-8080-exec-1] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:24:42 ERROR [http-nio-8080-exec-3] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-3] Exception processing template "experiments/cartesian-diver/index": Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:24:42 ERROR [http-nio-8080-exec-3] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:25:40 ERROR [http-nio-8080-exec-1] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-1] Exception processing template "experiments/cartesian-diver/index": Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:25:40 ERROR [http-nio-8080-exec-1] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:26:26 ERROR [http-nio-8080-exec-2] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-2] Exception processing template "experiments/cartesian-diver/index": Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:26:26 ERROR [http-nio-8080-exec-2] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 92, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:30:06 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:06 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:07 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:07 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:07 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:08 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:08 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:08 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:08 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:08 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:08 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:08 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:09 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:09 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:09 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:09 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:09 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:09 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:10 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:10 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:10 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:10 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:10 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:10 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:10 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:14 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:16 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:16 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:16 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:17 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:17 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:17 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:30:42 ERROR [http-nio-8080-exec-5] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-5] Exception processing template "experiments/cartesian-diver/index": Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:30:42 ERROR [http-nio-8080-exec-5] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:30:43 ERROR [http-nio-8080-exec-5] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/experiments/cartesian-diver/] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 23:31:20 ERROR [http-nio-8080-exec-10] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-10] Exception processing template "experiments/cartesian-diver/index": Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:31:20 ERROR [http-nio-8080-exec-10] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:31:20 ERROR [http-nio-8080-exec-10] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/experiments/cartesian-diver/] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 23:31:53 ERROR [http-nio-8080-exec-6] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-6] Exception processing template "experiments/cartesian-diver/index": Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:31:53 ERROR [http-nio-8080-exec-6] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:31:53 ERROR [http-nio-8080-exec-6] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/experiments/cartesian-diver/] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 23:31:59 ERROR [http-nio-8080-exec-3] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-3] Exception processing template "experiments/cartesian-diver/index": Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:31:59 ERROR [http-nio-8080-exec-3] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:31:59 ERROR [http-nio-8080-exec-3] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/experiments/cartesian-diver/] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 23:32:03 ERROR [http-nio-8080-exec-3] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-3] Exception processing template "experiments/cartesian-diver/index": Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:32:03 ERROR [http-nio-8080-exec-3] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:32:03 ERROR [http-nio-8080-exec-3] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/experiments/cartesian-diver/] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 23:33:33 ERROR [http-nio-8080-exec-2] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-2] Exception processing template "experiments/water-whistle/index": Could not parse as expression: "@{}" (template: "experiments/water-whistle/index" - line 358, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/water-whistle/index" - line 358, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:33:33 ERROR [http-nio-8080-exec-2] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/water-whistle/index" - line 358, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/water-whistle/index" - line 358, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:33:33 ERROR [http-nio-8080-exec-2] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/experiments/water-whistle/] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 23:33:56 ERROR [http-nio-8080-exec-9] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-9] Exception processing template "experiments/water-whistle/index": Could not parse as expression: "@{}" (template: "experiments/water-whistle/index" - line 358, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/water-whistle/index" - line 358, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:33:56 ERROR [http-nio-8080-exec-9] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/water-whistle/index" - line 358, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/water-whistle/index" - line 358, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:33:56 ERROR [http-nio-8080-exec-9] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/experiments/water-whistle/] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 23:34:12 ERROR [http-nio-8080-exec-1] TemplateEngine.java: [THYMELEAF][http-nio-8080-exec-1] Exception processing template "experiments/cartesian-diver/index": Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:34:12 ERROR [http-nio-8080-exec-1] DirectJDKLog.java: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "@{}" (template: "experiments/cartesian-diver/index" - line 424, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+2025-05-25 23:34:12 ERROR [http-nio-8080-exec-1] ErrorMvcAutoConfiguration.java: Cannot render error page for request [/experiments/cartesian-diver/] as the response has already been committed. As a result, the response may have the wrong status code.
+2025-05-25 23:48:02 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:03 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:04 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:05 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:05 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:05 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:05 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:05 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:07 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:07 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:07 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:07 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:07 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:07 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:07 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:07 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:07 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:07 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:08 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:08 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:09 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:09 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:10 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:11 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:11 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:11 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:11 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:11 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:11 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:11 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:26 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:26 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:26 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:26 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:26 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:26 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:26 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:27 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:27 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:27 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:27 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:27 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:27 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:27 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:27 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:27 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:35 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:40 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:40 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:40 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:41 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:41 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:41 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:41 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:41 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:41 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:41 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:41 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:42 ERROR [http-nio-8080-exec-4] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:42 ERROR [http-nio-8080-exec-10] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:42 ERROR [http-nio-8080-exec-5] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:42 ERROR [http-nio-8080-exec-3] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:42 ERROR [http-nio-8080-exec-7] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:42 ERROR [http-nio-8080-exec-1] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:42 ERROR [http-nio-8080-exec-6] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:42 ERROR [http-nio-8080-exec-9] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:48:42 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:49:15 ERROR [http-nio-8080-exec-8] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-25 23:49:44 ERROR [http-nio-8080-exec-2] JwtAuthFilter.java: Cannot set user authentication: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.

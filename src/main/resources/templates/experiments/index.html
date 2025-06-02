@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Hindrar att sidan skalas om i iPhone -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+
+    <link th:href="@{/css/stilmall.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/utskrift.css}" rel="stylesheet" type="text/css" media="print">
+
+    <!-- Favicon-kod -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=kPvPaOpNPB">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=kPvPaOpNPB">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=kPvPaOpNPB">
+    <link rel="manifest" href="/site.webmanifest?v=kPvPaOpNPB">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=kPvPaOpNPB" color="#df4b1f">
+    <link rel="shortcut icon" href="/favicon.ico?v=kPvPaOpNPB">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Проверка инструкций эксперимента</title>
+    <meta name="description" content="Форма для учителей: введите инструкции эксперимента и проверьте их с помощью Mistral AI.">
+    <meta name="keywords" content="эксперименты, учитель, проверка, инструкции, Mistral AI">
+
+    <style>
+        .experiment-form-container {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 32px 24px 24px 24px;
+            font-family: 'Mali', Arial, sans-serif;
+        }
+        .experiment-form-container h1 {
+            font-size: 2.2em;
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+        .experiment-form-container label {
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+        .experiment-form-container textarea {
+            width: 100%;
+            min-height: 120px;
+            font-size: 1em;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 18px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        .experiment-form-container button {
+            display: block;
+            width: 100%;
+            background: #df4b1f;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 0;
+            cursor: pointer;
+            margin-bottom: 18px;
+            transition: background 0.2s;
+        }
+        .experiment-form-container button:hover {
+            background: #b93b18;
+        }
+        .validation-result {
+            min-height: 40px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #f7f7f7;
+            color: #222;
+            font-size: 1.05em;
+            margin-top: 10px;
+            border: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body id="body">
+
+<div id="sidtoppswrapper">
+    <img id="sidtoppsbild_utskrift" th:src="@{/bilder/sidtopp_desktop_1920.png}">
+    <a th:href="@{/}"><div id="sidtoppsbild"></div></a>
+    <input class="osynlig-checkbox" type="checkbox" id="checkboxen">
+    <label class="menyknapp" for="checkboxen"><span class="mittenstreck"></span></label>
+    <div id="dropdown">
+        <center>
+            <img th:src="@{/bilder/bokstapel.png}" id="bokstapel" usemap="#image-map"><br>
+            <!-- ... (keep the same map as in physics/index.html) ... -->
+        </center>
+    </div>
+</div>
+
+<div class="experiment-form-container">
+    <h1>Проверка инструкций эксперимента</h1>
+    <form id="experiment-instructions-form" onsubmit="event.preventDefault(); validateInstructions();">
+        <label for="experiment-name">Название эксперимента:</label>
+        <input type="text" id="experiment-name" name="experiment-name" placeholder="Введите название эксперимента" style="width:100%;font-size:1em;padding:10px;border-radius:8px;border:1px solid #ccc;margin-bottom:18px;font-family:inherit;">
+
+        <label for="materials">Материалы:</label>
+        <textarea id="materials" name="materials" placeholder="Перечислите необходимые материалы..." style="min-height:60px;"></textarea>
+
+        <label for="steps">Шаги эксперимента:</label>
+        <textarea id="steps" name="steps" placeholder="Опишите шаги эксперимента..." style="min-height:100px;"></textarea>
+
+        <button type="submit">Проверить инструкции (Mistral AI)</button>
+    </form>
+    <div id="validation-result" class="validation-result"></div>
+</div>
+
+<div id="sidfoten">
+    <h4 class="sidfot">Содержание сайта</h4>
+    <div id="sidfoten_innerwrapper">
+        <div id="sidfoten_vanster">
+            <a th:href="@{/}" class="sidfot">Главная</a><br>
+            <a th:href="@{/physics/}" class="sidfot">Физика</a><br>
+            <br>
+        </div>
+        <div id="sidfoten_mitten">
+            <a th:href="@{/fire/}" class="sidfot">Тема: Огонь</a><br>
+            <a th:href="@{/air/}" class="sidfot">Тема: Воздух</a><br>
+            <a th:href="@{/water/}" class="sidfot">Тема: Вода</a><br>
+            <br>
+            <a th:href="@{/science-projects/}" class="sidfot">Научные проекты</a><br>
+            <a th:href="@{/teachers-guide/}" class="sidfot">Руководство для учителей</a><br>
+            <br>
+        </div>
+        <div id="sidfoten_hoger">
+            <a th:href="@{/search/}" class="sidfot">Поиск</a><br>
+            <a href="https://www.youtube.com/channel/UC2JUYBeXkSmLeaQMWIaCWlQ" target="_blank" class="sidfot">YouTube</a><br>
+            <a th:href="@{/about/}" class="sidfot">О проекте</a><br>
+        </div>
+        <div id="sidfoten_text_langst_ner">
+            <br><br>
+            © Архив экспериментов. Интересные и простые научные эксперименты для детей и взрослых. В области биологии, химии, физики, наук о Земле, астрономии, технологий, огня, воздуха и воды. Для проведения в детских садах, школах, дома. Также научные проекты и руководство для учителей.
+            <br><br>
+            <a href="#">Наверх</a>
+        </div>
+        <div id="sidfoten_text_langst_ner_mobil">
+            <br><br>
+            © Архив экспериментов. Интересные и простые научные эксперименты для детей и взрослых. В области биологии, химии, физики, наук о Земле, астрономии, технологий, огня, воздуха и воды. Для проведения в детских садах, школах, дома. Также научные проекты и руководство для учителей.
+            <br><br>
+            <a href="#">Наверх</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Real Mistral AI validation (AJAX to backend)
+    async function validateInstructions() {
+        var name = document.getElementById('experiment-name').value.trim();
+        var materials = document.getElementById('materials').value.trim();
+        var steps = document.getElementById('steps').value.trim();
+        var resultDiv = document.getElementById('validation-result');
+
+        if (!name || !materials || !steps) {
+            resultDiv.style.color = '#b93b18';
+            resultDiv.textContent = 'Пожалуйста, заполните все поля для проверки.';
+            return;
+        }
+
+        resultDiv.style.color = '#222';
+        resultDiv.textContent = 'Проверка инструкций...';
+
+        try {
+            const response = await fetch('/api/experiments/validate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    materials: materials,
+                    steps: steps
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('Ошибка при обращении к серверу');
+            }
+
+            const data = await response.json();
+            resultDiv.style.color = data.success ? '#228B22' : '#b93b18';
+            resultDiv.innerHTML = data.message || 'Нет ответа от Mistral AI';
+        } catch (error) {
+            resultDiv.style.color = '#b93b18';
+            resultDiv.textContent = 'Ошибка: ' + error.message;
+        }
+    }
+</script>
+
+</body>
+</html>
